@@ -18,6 +18,9 @@ All multi-agent pipelines and step dependencies must form a strictly Directed Ac
 ### GRAPH-INV-003: Zero External Core Dependencies
 Core Python engine functionality must not require external pip dependencies beyond the Python 3.9+ standard library.
 
+### GRAPH-INV-004 / CR-CLI-FEATURE-STANDARD-001: CLI-First Shared Features & Artifact Hexad
+Anything usable across multiple repos MUST live in `HATH0R-CLI`. Deliver complete feature packages with CLI commands, bots, workflows, and the documentation hexad (Strategy, Procedure, Playbook, Runbook, Workflow, Bot Spec). Member repositories contain declarative configuration files binding to CLI tools.
+
 ---
 
 ## 2. Multi-Plane Graph Topology
