@@ -56,7 +56,11 @@ def build_node_package():
 
 def run_node_tests():
     print("[AgentGraph Node Build] Running Node plugin test suite in release directory...")
-    cmd = ["node", "--experimental-strip-types", "--test", "test/*.test.ts"]
+    # Prefer pure JS test runner for universal compatibility across Node 18, 20, 22, 24
+    if (RELEASE_NODE_DIR / "test" / "plugin.test.js").exists():
+        cmd = ["node", "--test", "test/plugin.test.js"]
+    else:
+        cmd = ["node", "--experimental-strip-types", "--test", "test/*.test.ts"]
     subprocess.run(cmd, cwd=RELEASE_NODE_DIR, check=True)
 
 
