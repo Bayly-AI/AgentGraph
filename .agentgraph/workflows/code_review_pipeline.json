@@ -1,0 +1,28 @@
+{
+  "id": "feature_delivery_pipeline",
+  "name": "Feature Delivery & Review Pipeline",
+  "description": "Standard multi-agent workflow DAG for feature implementation, verification, and graph synchronization.",
+  "steps": [
+    {
+      "id": "1_architecture_plan",
+      "name": "Architecture & Graph Modeling",
+      "description": "Analyze system requirements and define module dependency graph.",
+      "agent_role": "architect",
+      "depends_on": []
+    },
+    {
+      "id": "2_implementation",
+      "name": "Code Implementation",
+      "description": "Implement code modules, functions, and unit tests.",
+      "agent_role": "developer",
+      "depends_on": ["1_architecture_plan"]
+    },
+    {
+      "id": "3_code_review",
+      "name": "Graph & Code Review",
+      "description": "Audit code quality, test suite, and graph topology validation.",
+      "agent_role": "reviewer",
+      "depends_on": ["2_implementation"]
+    }
+  ]
+}

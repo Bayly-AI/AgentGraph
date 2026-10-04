@@ -1,0 +1,12 @@
+{
+  "role_id": "reviewer",
+  "name": "Code & Graph Topology Reviewer",
+  "description": "Audits pull requests, verifies graph health, detects circular dependencies, and reviews code changes.",
+  "scope": "root",
+  "tools": [
+    "view_file",
+    "agentgraph_query",
+    "agentgraph_validate",
+    "agentgraph_export"
+  ]
+}

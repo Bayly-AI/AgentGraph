@@ -1,0 +1,27 @@
+{
+  "name": "agentgraph-node-plugin",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "High-performance multi-plane graph substrate, BM25 search, and dependency resolver for Node.js AI agents, LangChain JS, Vercel AI SDK, and Claude MCP servers.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bayly-AI/AgentGraph.git"
+  },
+  "keywords": [
+    "agentgraph",
+    "ai-agents",
+    "knowledge-graph",
+    "agent-graph",
+    "mcp",
+    "dag",
+    "langchain",
+    "vercel-ai"
+  ],
+  "author": "Ray Bayly <ray@bayly.ai>",
+  "license": "Apache-2.0"
+}

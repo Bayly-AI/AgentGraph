@@ -1,0 +1,13 @@
+{
+  "role_id": "architect",
+  "name": "System & Graph Architect",
+  "description": "Designs multi-agent graph topologies, workflow DAGs, and system boundary specifications.",
+  "scope": "root",
+  "tools": [
+    "view_file",
+    "agentgraph_query",
+    "agentgraph_traverse",
+    "agentgraph_export",
+    "agentgraph_validate"
+  ]
+}

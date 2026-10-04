@@ -1,0 +1,12 @@
+{
+  "role_id": "researcher",
+  "name": "Knowledge & Deep Research Agent",
+  "description": "Performs deep lexical and topological graph search across documentation, rules, and code entities.",
+  "scope": "root",
+  "tools": [
+    "view_file",
+    "search_web",
+    "agentgraph_query",
+    "agentgraph_traverse"
+  ]
+}

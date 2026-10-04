@@ -1,0 +1,3 @@
+# Global CODEOWNERS for AgentGraph
+# Ray Bayly must approve all Pull Requests before merge into development or release branches.
+* @raybayly
