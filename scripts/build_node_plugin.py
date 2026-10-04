@@ -21,15 +21,23 @@ def clean_release_dir():
 
 def build_node_package():
     print(f"[AgentGraph Node Build] Copying Node plugin package to {RELEASE_NODE_DIR}...")
-    for item in ["package.json", "README.md", "API_REFERENCE.md"]:
-        shutil.copy2(NODE_PLUGIN_DIR / item, RELEASE_NODE_DIR / item)
+    for item in ["package.json", "README.md", "API_REFERENCE.md", "tsconfig.json"]:
+        src_item = NODE_PLUGIN_DIR / item
+        if src_item.exists():
+            shutil.copy2(src_item, RELEASE_NODE_DIR / item)
+
+    if (ROOT_DIR / "LICENSE").exists():
+        shutil.copy2(ROOT_DIR / "LICENSE", RELEASE_NODE_DIR / "LICENSE")
 
     shutil.copytree(NODE_PLUGIN_DIR / "src", RELEASE_NODE_DIR / "src", dirs_exist_ok=True)
     shutil.copytree(NODE_PLUGIN_DIR / "test", RELEASE_NODE_DIR / "test", dirs_exist_ok=True)
 
     dist_dir = RELEASE_NODE_DIR / "dist"
     dist_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copytree(NODE_PLUGIN_DIR / "src", dist_dir, dirs_exist_ok=True)
+    if (NODE_PLUGIN_DIR / "dist").exists():
+        shutil.copytree(NODE_PLUGIN_DIR / "dist", dist_dir, dirs_exist_ok=True)
+    else:
+        shutil.copytree(NODE_PLUGIN_DIR / "src", dist_dir, dirs_exist_ok=True)
 
     # Copy docs tree
     rel_docs_dir = RELEASE_NODE_DIR / "docs"
