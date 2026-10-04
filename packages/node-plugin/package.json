@@ -1,6 +1,6 @@
 {
   "name": "agentgraph-node-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "High-performance multi-plane graph substrate, BM25 search, and dependency resolver for Node.js AI agents, LangChain JS, Vercel AI SDK, and Claude MCP servers.",
   "main": "./dist/index.js",
