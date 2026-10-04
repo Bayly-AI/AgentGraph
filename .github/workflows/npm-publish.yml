@@ -23,7 +23,7 @@ jobs:
           python3 scripts/build_node_plugin.py
 
       - name: Publish to npm Registry
-        cwd: ./release/javascript/node/plugin
+        working-directory: ./release/javascript/node/plugin
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
