@@ -1,0 +1,14 @@
+[
+  {
+    "id": "graph_inv_001_no_direct_push",
+    "title": "Main & Development Branch Protection",
+    "target_scope": "root",
+    "content": "All changes must be submitted via Pull Requests and receive explicit approval from Ray Bayly (@raybayly) before merging into development."
+  },
+  {
+    "id": "graph_inv_002_acyclic_workflows",
+    "title": "Acyclic Workflow DAG Invariant",
+    "target_scope": "root",
+    "content": "All agent execution workflows and step dependencies must form a strictly Directed Acyclic Graph (DAG) with zero circular dependencies."
+  }
+]

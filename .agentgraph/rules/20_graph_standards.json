@@ -1,0 +1,14 @@
+[
+  {
+    "id": "graph_std_001_typed_edges",
+    "title": "Typed Relational Graph Edges",
+    "target_scope": "root",
+    "content": "All graph edges must specify an explicit relationship type (CONTAINS_STEP, ASSIGNED_TO, DEPENDS_ON, REFERENCES, GOVERNS, INHERITS_FROM)."
+  },
+  {
+    "id": "graph_std_002_clean_ast_sync",
+    "title": "Synchronized AST Code Graph",
+    "target_scope": "root",
+    "content": "The knowledge and code planes must be kept in sync with actual codebase AST structures via agentgraph sync."
+  }
+]
