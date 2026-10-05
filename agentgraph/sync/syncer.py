@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import List
 
 from agentgraph.core.graph import AgentGraphEngine
 from agentgraph.core.models import AgentGraphEdge, AgentGraphNode, AgentGraphPlane
@@ -58,7 +57,7 @@ class RepositorySyncer:
                                 relation="GOVERNS",
                                 plane=AgentGraphPlane.RULES.value
                             ))
-                except Exception:
+                except (json.JSONDecodeError, OSError, KeyError, ValueError, AttributeError):
                     pass
 
         # 3. Ingest Agents in .agentgraph/agents/*.json
@@ -97,7 +96,7 @@ class RepositorySyncer:
                             relation="INHERITS_FROM",
                             plane=AgentGraphPlane.AGENTS.value
                         ))
-                except Exception:
+                except (json.JSONDecodeError, OSError, KeyError, ValueError, AttributeError):
                     pass
 
         # 4. Ingest Workflows in .agentgraph/workflows/*.json
@@ -152,7 +151,7 @@ class RepositorySyncer:
                                 relation="DEPENDS_ON",
                                 plane=AgentGraphPlane.WORKFLOWS.value
                             ))
-                except Exception:
+                except (json.JSONDecodeError, OSError, KeyError, ValueError, AttributeError):
                     pass
 
         # 5. Ingest Knowledge & Documentation
@@ -165,7 +164,7 @@ class RepositorySyncer:
                         graph.add_node(node)
                         for e in edges:
                             graph.add_edge(e)
-                    except Exception:
+                    except (OSError, ValueError, TypeError, AttributeError, SyntaxError):
                         pass
 
         # 6. Ingest Python Code AST
@@ -181,7 +180,7 @@ class RepositorySyncer:
                             graph.add_node(n)
                         for e in edges:
                             graph.add_edge(e)
-                    except Exception:
+                    except (OSError, ValueError, TypeError, AttributeError, SyntaxError):
                         pass
 
         # 7. Ingest JS / TS Code
@@ -197,7 +196,7 @@ class RepositorySyncer:
                             graph.add_node(n)
                         for e in edges:
                             graph.add_edge(e)
-                    except Exception:
+                    except (OSError, ValueError, TypeError, AttributeError, SyntaxError):
                         pass
 
         # Persist to SQLite

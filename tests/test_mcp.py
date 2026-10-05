@@ -43,6 +43,22 @@ class TestMCPServer(unittest.TestCase):
         res = self.server.handle_tool_call("agentgraph_export", {"format": "mermaid"})
         self.assertIn("flowchart", res)
 
+    def test_traverse_and_resolve_tool_call(self):
+        res_trav = self.server.handle_tool_call("agentgraph_traverse", {"node_id": "role:developer"})
+        self.assertIsInstance(json.loads(res_trav), list)
+
+        res_res = self.server.handle_tool_call("agentgraph_resolve", {"node_id": "role:developer"})
+        self.assertIsInstance(json.loads(res_res), dict)
+
+    def test_sync_tool_call(self):
+        res_sync = self.server.handle_tool_call("agentgraph_sync", {})
+        parsed = json.loads(res_sync)
+        self.assertEqual(parsed.get("status"), "SUCCESS")
+
+    def test_unknown_tool_call(self):
+        res = self.server.handle_tool_call("unknown_tool", {})
+        self.assertIn("Unknown tool name", res)
+
 
 if __name__ == "__main__":
     unittest.main()

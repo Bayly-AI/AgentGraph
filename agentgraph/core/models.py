@@ -29,8 +29,8 @@ class AgentGraphNode:
     valid_from: Optional[str] = None
     valid_to: Optional[str] = None
     is_current: bool = True
-    created_at: str = field(default_factory=lambda: datetime.datetime.utcnow().isoformat())
-    updated_at: str = field(default_factory=lambda: datetime.datetime.utcnow().isoformat())
+    created_at: str = field(default_factory=lambda: datetime.datetime.now(datetime.timezone.utc).isoformat())
+    updated_at: str = field(default_factory=lambda: datetime.datetime.now(datetime.timezone.utc).isoformat())
 
     def to_dict(self) -> Dict[str, Any]:
         return {
@@ -59,8 +59,8 @@ class AgentGraphNode:
             valid_from=data.get("valid_from"),
             valid_to=data.get("valid_to"),
             is_current=data.get("is_current", True),
-            created_at=data.get("created_at", datetime.datetime.utcnow().isoformat()),
-            updated_at=data.get("updated_at", datetime.datetime.utcnow().isoformat()),
+            created_at=data.get("created_at", datetime.datetime.now(datetime.timezone.utc).isoformat()),
+            updated_at=data.get("updated_at", datetime.datetime.now(datetime.timezone.utc).isoformat()),
         )
 
 

@@ -22,7 +22,7 @@ class CodeASTParser:
         try:
             content = file_path.read_text(encoding="utf-8", errors="replace")
             tree = ast.parse(content, filename=str(file_path))
-        except Exception:
+        except (SyntaxError, UnicodeDecodeError, OSError, ValueError):
             return [], []
 
         nodes: List[AgentGraphNode] = []
@@ -118,7 +118,7 @@ class CodeASTParser:
 
         try:
             content = file_path.read_text(encoding="utf-8", errors="replace")
-        except Exception:
+        except (UnicodeDecodeError, OSError, ValueError):
             return [], []
 
         nodes: List[AgentGraphNode] = []
