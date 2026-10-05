@@ -224,8 +224,10 @@ def main(args_list: list[str] | None = None) -> None:
             output_content = GraphExporter.to_json(graph)
 
         if args.out:
-            Path(args.out).write_text(output_content, encoding="utf-8")
-            print(f"✓ Exported {args.format} to {args.out}")
+            out_path = Path(args.out).resolve()
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(output_content, encoding="utf-8")
+            print(f"✓ Exported {args.format} to {out_path}")
         else:
             print(output_content)
 
