@@ -115,7 +115,7 @@ class AgentGraphMCPServer:
         if self.db_path.exists():
             try:
                 graph.load_from_db()
-            except Exception:
+            except (OSError, ValueError, json.JSONDecodeError):
                 pass
 
         if name == "agentgraph_query":
@@ -180,7 +180,7 @@ class AgentGraphMCPServer:
 
             try:
                 req = json.loads(line)
-            except Exception:
+            except (json.JSONDecodeError, ValueError, TypeError):
                 continue
 
             req_id = req.get("id")

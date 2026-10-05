@@ -9,7 +9,6 @@ from typing import Any, Dict, List, Optional, Set, Tuple
 from agentgraph.core.models import (
     AgentGraphEdge,
     AgentGraphNode,
-    AgentGraphPlane,
     GraphValidationReport,
     SearchResult,
     TraversalPath,
@@ -144,9 +143,7 @@ class AgentGraphEngine:
         dangling_edges: List[Tuple[str, str]] = []
 
         for e in self.edges:
-            if e.source not in self.nodes:
-                dangling_edges.append((e.source, e.target))
-            elif (
+            if e.source not in self.nodes or (
                 not e.target.startswith("tool:")
                 and not e.target.startswith("ast:class_ref:")
                 and not e.target.startswith("external:")
@@ -216,7 +213,7 @@ class AgentGraphEngine:
         store.close()
 
     @classmethod
-    def init(cls, workspace_dir: Path | str = ".", no_hooks: bool = False) -> "AgentGraphEngine":
+    def init(cls, workspace_dir: Path | str = ".", no_hooks: bool = False) -> AgentGraphEngine:
         """Initialize workspace directory layout (.agentgraph/, AGENTS.md, git hooks) and sync substrate."""
         from agentgraph.init.initializer import RepositoryInitializer
         from agentgraph.sync.syncer import RepositorySyncer

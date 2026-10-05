@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import sys
 from pathlib import Path
 
@@ -99,7 +98,7 @@ def main(args_list: list[str] | None = None) -> None:
         print(f"[AgentGraph] Initializing workspace in {target}...")
         ag_dir = RepositoryInitializer.initialize_repository(target_dir=target, install_hooks=not args.no_hooks)
         print(f"  ✓ Initialized layout in {ag_dir}")
-        print(f"[AgentGraph] Performing initial synchronization...")
+        print("[AgentGraph] Performing initial synchronization...")
         graph = RepositorySyncer.sync_repository(root_dir=target, db_path=ag_dir / "graph.db")
         stats = graph.get_stats()
         print(f"  ✓ Initial sync complete: {stats['total_nodes']} nodes, {stats['total_edges']} edges indexed.")
@@ -301,7 +300,7 @@ def main(args_list: list[str] | None = None) -> None:
             try:
                 subprocess.run([sys.executable, str(build_py)], check=True, stdout=subprocess.DEVNULL)
                 print("  ✓ Gate 4 PASSED: Standalone release package verified.")
-            except Exception as b_err:
+            except (subprocess.SubprocessError, OSError) as b_err:
                 print(f"  ✗ Gate 4 FAILED: Build script error: {b_err}")
                 sys.exit(1)
         else:

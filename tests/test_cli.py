@@ -51,6 +51,34 @@ class TestCLI(unittest.TestCase):
         stats = json.loads(out)
         self.assertGreater(stats["total_nodes"], 0)
 
+    def test_cli_traverse_and_resolve(self):
+        db_path = str(self.root / ".agentgraph" / "graph.db")
+        self._run_cli(["sync", "--dir", str(self.root), "--db", db_path])
+        out = self._run_cli(["traverse", "role:developer", "--db", db_path, "--json"])
+        hops = json.loads(out)
+        self.assertIsInstance(hops, list)
+
+        out_res = self._run_cli(["resolve", "role:developer", "--db", db_path, "--json"])
+        resolved = json.loads(out_res)
+        self.assertIsInstance(resolved, dict)
+
+    def test_cli_export(self):
+        db_path = str(self.root / ".agentgraph" / "graph.db")
+        self._run_cli(["sync", "--dir", str(self.root), "--db", db_path])
+        out = self._run_cli(["export", "--format", "mermaid", "--db", db_path])
+        self.assertIn("flowchart", out)
+
+    def test_cli_init_command(self):
+        new_dir = self.root / "sub_repo"
+        out = self._run_cli(["init", "--dir", str(new_dir), "--no-hooks"])
+        self.assertIn("Initialized layout", out)
+
+    def test_cli_quality_gate(self):
+        db_path = str(self.root / ".agentgraph" / "graph.db")
+        self._run_cli(["sync", "--dir", str(self.root), "--db", db_path])
+        out = self._run_cli(["quality-gate", "--dir", str(self.root), "--db", db_path, "--json"])
+        self.assertIn("PASSED", out)
+
 
 if __name__ == "__main__":
     unittest.main()

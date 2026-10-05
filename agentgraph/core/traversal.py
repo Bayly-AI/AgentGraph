@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from collections import deque
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 from agentgraph.core.models import AgentGraphEdge, AgentGraphNode, TraversalPath
 
@@ -118,9 +118,8 @@ class GraphTraversalEngine:
         def dfs(curr: str):
             visited.add(curr)
             for edge in outgoing_edges.get(curr, []):
-                if edge.relation in dependency_relations:
-                    if edge.target not in visited:
-                        dfs(edge.target)
+                if edge.relation in dependency_relations and edge.target not in visited:
+                    dfs(edge.target)
             order.append(curr)
 
         dfs(node_id)
