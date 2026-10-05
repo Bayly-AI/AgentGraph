@@ -1,0 +1,204 @@
+{
+  "schema_version": "hath0r.agentgraph/1",
+  "graph_id": "agentgraph-AgentGraph",
+  "timestamp": "2026-10-05T17:11:02.948381+00:00",
+  "nodes": [
+    {
+      "id": "doc:agents-root",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (root)",
+      "content": "# AGENTS.md — AgentGraph Cognitive Substrate & Architecture Directives\n\n> **Repository:** Bayly-AI/AgentGraph  \n> **Framework:** AgentGraph Multi-Plane Engine  \n> **Maintainer & Lead Reviewer:** Ray Bayly (@raybayly)  \n> **Status:** Active / Open Source  \n\n---\n\n## 1. System Invariants & Inviolable Directives\n\n### GRAPH-INV-001: Main & Development Branch Protection\nThis repository is open source and publicly accessible. However, direct pushes to `development`, `master`, `main`, `staging`, or `testing` are restricted exclusively to repository administrators. All proposed modifications must be submitted via Pull Requests against the `development` branch and must receive explicit review and approval by **Ray Bayly (`@raybayly`)** prior to merging.\n\n### GRAPH-INV-002: Acyclic Workflow Execution\nAll multi-agent pipelines and step dependencies must form a strictly Directed Acyclic Graph (DAG). Topological cycle verification (`agentgraph validate`) must pass cleanly on all PRs.\n\n### GRAPH-INV-",
+      "properties": {
+        "path": "AGENTS.md",
+        "subsystem": "root"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-cli",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (cli)",
+      "content": "# AGENTS.md — AgentGraph Cognitive Substrate & Architecture Directives\n\n> **Repository:** Bayly-AI/AgentGraph  \n> **Framework:** AgentGraph Multi-Plane Engine  \n> **Maintainer & Lead Reviewer:** Ray Bayly (@raybayly)  \n> **Status:** Active / Open Source  \n\n---\n\n## 1. System Invariants & Inviolable Directives\n\n### GRAPH-INV-001: Main & Development Branch Protection\nThis repository is open source and publicly accessible. However, direct pushes to `development`, `master`, `main`, `staging`, or `testing` are restricted exclusively to repository administrators. All proposed modifications must be submitted via Pull Requests against the `development` branch and must receive explicit review and approval by **Ray Bayly (`@raybayly`)** prior to merging.\n\n### GRAPH-INV-002: Acyclic Workflow Execution\nAll multi-agent pipelines and step dependencies must form a strictly Directed Acyclic Graph (DAG). Topological cycle verification (`agentgraph validate`) must pass cleanly on all PRs.\n\n### GRAPH-INV-",
+      "properties": {
+        "path": "release/python/cli/AGENTS.md",
+        "subsystem": "cli"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-docs",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (docs)",
+      "content": "# AGENTS.md — AgentGraph Cognitive Substrate & Architecture Directives\n\n> **Repository:** Bayly-AI/AgentGraph  \n> **Framework:** AgentGraph Multi-Plane Engine  \n> **Maintainer & Lead Reviewer:** Ray Bayly (@raybayly)  \n> **Status:** Active / Open Source  \n\n---\n\n## 1. System Invariants & Inviolable Directives\n\n### GRAPH-INV-001: Main & Development Branch Protection\nThis repository is open source and publicly accessible. However, direct pushes to `development`, `master`, `main`, `staging`, or `testing` are restricted exclusively to repository administrators. All proposed modifications must be submitted via Pull Requests against the `development` branch and must receive explicit review and approval by **Ray Bayly (`@raybayly`)** prior to merging.\n\n### GRAPH-INV-002: Acyclic Workflow Execution\nAll multi-agent pipelines and step dependencies must form a strictly Directed Acyclic Graph (DAG). Topological cycle verification (`agentgraph validate`) must pass cleanly on all PRs.\n\n### GRAPH-INV-",
+      "properties": {
+        "path": "release/javascript/node/plugin/docs/AGENTS.md",
+        "subsystem": "docs"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:agents-docs",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "AGENTS.md (docs)",
+      "content": "# AGENTS.md — AgentGraph Cognitive Substrate & Architecture Directives\n\n> **Repository:** Bayly-AI/AgentGraph  \n> **Framework:** AgentGraph Multi-Plane Engine  \n> **Maintainer & Lead Reviewer:** Ray Bayly (@raybayly)  \n> **Status:** Active / Open Source  \n\n---\n\n## 1. System Invariants & Inviolable Directives\n\n### GRAPH-INV-001: Main & Development Branch Protection\nThis repository is open source and publicly accessible. However, direct pushes to `development`, `master`, `main`, `staging`, or `testing` are restricted exclusively to repository administrators. All proposed modifications must be submitted via Pull Requests against the `development` branch and must receive explicit review and approval by **Ray Bayly (`@raybayly`)** prior to merging.\n\n### GRAPH-INV-002: Acyclic Workflow Execution\nAll multi-agent pipelines and step dependencies must form a strictly Directed Acyclic Graph (DAG). Topological cycle verification (`agentgraph validate`) must pass cleanly on all PRs.\n\n### GRAPH-INV-",
+      "properties": {
+        "path": "release/vscode/plugin/docs/AGENTS.md",
+        "subsystem": "docs"
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__INDEX_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Index",
+      "content": "# AgentGraph Documentation Index\n\nWelcome to the technical documentation library for **AgentGraph**.\n\n---\n\n## 📚 Engineering & Technical Guides\n\n- 🏛️ **[System Architecture](engineering/ARCHITECTURE.md):** 5-Plane heterogeneous graph topology, SQLite persistence, and BM25 search internals.\n- 🤖 **[Claude Desktop & Marketplace Integration](engineering/CLAUDE_MARKETPLACE.md):** Configuring MCP stdio server for Anthropic Claude Desktop and Claude Code CLI.\n- 💻 **[CLI Reference](engineering/CLI_REFERENCE.md):** Complete guide to all `agentgraph` command-line tools.\n- ⚡ **[Runtime Integration Guide](engineering/RUNTIME_INTEGRATION.md):** Integrating AgentGraph with Python SDK, Node.js SDK, LangChain, and Vercel AI SDK.\n- 🧪 **[Testing & Verification Guide](engineering/TESTING_GUIDE.md):** Unit testing standards and Quality Gate verification.\n- 📁 **[Repository Organization](engineering/REPO_ORGANIZATION.md):** Directory structure, `.agentgraph/` layout, and branch governance rules.\n",
+      "properties": {
+        "path": "docs/INDEX.md",
+        "category": "docs",
+        "size_bytes": 1010
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__engineering__CLAUDE_MARKETPLACE_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Claude Marketplace",
+      "content": "# AgentGraph Model Context Protocol (MCP) & Claude Integration Guide\n\n> **Integration Standard:** Model Context Protocol (MCP) Stdio JSON-RPC 2.0  \n> **Supported Clients:** Claude Desktop, Claude Code CLI, Cursor, Windsurf, FastMCP  \n\n---\n\n## 1. Overview\n\nAgentGraph provides a native **Model Context Protocol (MCP)** server (`agentgraph mcp`), enabling Anthropic **Claude Desktop** and **Claude Code CLI** to query the cognitive graph substrate, traverse multi-agent networks, resolve step DAGs, and generate visual Mermaid diagrams directly during conversations.\n\n---\n\n## 2. Claude Desktop Integration (`claude_desktop_config.json`)\n\nTo register AgentGraph in **Claude Desktop**:\n\n1. Open your Claude Desktop configuration file:\n   - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`\n   - **Windows:** `%APPDATA%\\Claude\\claude_desktop_config.json`\n2. Add the `agentgraph` MCP server entry:\n\n```json\n{\n  \"mcpServers\": {\n    \"agentgraph\": {\n      \"command\": \"agentgraph\",\n      \"args\": [\"mcp\", \"--dir\", \"/path/to/your/workspace\"]\n    }\n  }\n}\n```\n\nIf using the standalone binary release directly:\n\n```json\n{\n  \"mcpServers\": {\n    \"agentgraph\": {\n      \"command\": \"/usr/local",
+      "properties": {
+        "path": "docs/engineering/CLAUDE_MARKETPLACE.md",
+        "category": "engineering",
+        "size_bytes": 2771
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__engineering__CLI_REFERENCE_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Cli Reference",
+      "content": "# AgentGraph CLI Reference\n\nThe `agentgraph` CLI provides command-line tools for graph initialization, workspace synchronization, BM25 searching, traversal, dependency resolution, validation, export, and MCP serving.\n\n---\n\n## Commands\n\n### `agentgraph init`\nInitializes `.agentgraph/` directory structure, default templates, `AGENTS.md`, and git pre-commit hooks.\n\n```bash\nagentgraph init [--dir <path>] [--no-hooks]\n```\n\n### `agentgraph sync`\nCrawls workspace files (`AGENTS.md`, `.agentgraph/rules/*.json`, `.agentgraph/agents/*.json`, `.agentgraph/workflows/*.json`, `docs/`, `agentgraph/`, `src/`) and updates the SQLite graph database.\n\n```bash\nagentgraph sync [--dir <path>] [--db <path>]\n```\n\n### `agentgraph query`\nExecutes BM25 lexical ranking across all nodes or a specific plane.\n\n```bash\nagentgraph query <query_string> [--plane <rules|agents|workflows|knowledge|code>] [--limit <n>] [--db <path>] [--json]\n```\n\n### `agentgraph traverse`\nPerforms Breadth-First Search traversal starting from a node.\n\n```bash\nagentgraph traverse <node_id> [--depth <n>] [--direction <outgoing|incoming|both>] [--relation <rel>] [--db <path>] [--json]\n```\n\n### `agentgraph resolve`\nResolves upstream and do",
+      "properties": {
+        "path": "docs/engineering/CLI_REFERENCE.md",
+        "category": "engineering",
+        "size_bytes": 2156
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__engineering__ARCHITECTURE_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Architecture",
+      "content": "# AgentGraph Architecture & Substrate Design\n\n## 1. Multi-Plane Architecture\n\nAgentGraph organizes multi-agent cognition into 5 distinct, interconnected planes:\n\n1. **Agents Plane (`agents`):** Agent identities, role specifications, tool permissions, and parent-child inheritance.\n2. **Workflows Plane (`workflows`):** Multi-agent execution pipelines, step dependencies (`DEPENDS_ON`), and agent assignments (`ASSIGNED_TO`).\n3. **Knowledge Plane (`knowledge`):** Markdown architecture documentation, specifications, and relative links (`REFERENCES`).\n4. **Code AST Plane (`code`):** Python and JS/TS AST entities including modules, classes, methods, functions, and inheritance links (`INHERITS_FROM`, `CONTAINS_CLASS`, `CONTAINS_FUNCTION`).\n5. **Rules Plane (`rules`):** Invariant policies, standards, and role-governing directives (`GOVERNS`).\n\n---\n\n## 2. Storage & Indexing Subsystem\n\nAgentGraph utilizes a single-file atomic SQLite3 database at `.agentgraph/graph.db`:\n- Zero external ORM or C extensions required.\n- Standard schema: `nodes`, `edges`.\n- Performance indices on `nodes.plane`, `nodes.type`, `edges.source`, `edges.target`, `edges.relation`, and `edges.plane`.\n\n---\n\n## 3. Okapi BM25",
+      "properties": {
+        "path": "docs/engineering/ARCHITECTURE.md",
+        "category": "engineering",
+        "size_bytes": 1532
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__engineering__RUNTIME_INTEGRATION_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Runtime Integration",
+      "content": "# AgentGraph Runtime Integration Guide\n\nThis guide describes how to integrate AgentGraph into Python applications, Node.js runtimes, LangChain, and Vercel AI SDK.\n\n---\n\n## 1. Python SDK Integration\n\n```python\nfrom agentgraph import AgentGraph, AgentGraphPlane\n\n# Initialize or load graph\ngraph = AgentGraph.init(workspace_dir=\".\")\n\n# BM25 Search\nresults = graph.query(\"developer\", plane=AgentGraphPlane.AGENTS.value)\nfor r in results:\n    print(r.node.label, r.score)\n\n# BFS Traversal\nhops = graph.traverse(start_node_id=\"role:developer\", direction=\"outgoing\", max_depth=2)\n\n# Topological Dependency Resolution\ndeps = graph.resolve_dependencies(\"workflow:feature_delivery_pipeline\")\n```\n\n---\n\n## 2. Node.js / TypeScript SDK Integration\n\n```typescript\nimport { AgentGraphClient } from \"agentgraph-node-plugin\";\n\nconst client = new AgentGraphClient();\n\n// Synchronize workspace\nawait client.sync();\n\n// Search\nconst results = await client.query(\"review\", \"workflows\");\n\n// Export Mermaid diagram\nconst mermaid = await client.export(\"mermaid\");\n```\n\n---\n\n## 3. Express.js Middleware Integration\n\n```typescript\nimport express from \"express\";\nimport { AgentGraphPlugin } from \"agentgraph-node-plugin\";\n\nco",
+      "properties": {
+        "path": "docs/engineering/RUNTIME_INTEGRATION.md",
+        "category": "engineering",
+        "size_bytes": 1493
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__engineering__TESTING_GUIDE_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Testing Guide",
+      "content": "# AgentGraph Testing & Quality Gates Guide\n\n## 1. Running the Test Suites\n\n### Python Unit Tests\n```bash\npython3 -m unittest discover tests\n```\n\n### Node.js Plugin Unit Tests\n```bash\nnode --experimental-strip-types --test packages/node-plugin/test/*.test.ts\n```\n\n### Full Quality Gate Execution\n```bash\npython3 -m agentgraph quality-gate\n```\n\n---\n\n## 2. Quality Gate Stages\n\n1. **Gate 1: Workspace Ingestion & Sync:** Parses `AGENTS.md`, rules, agents, workflows, knowledge markdown, and code AST.\n2. **Gate 2: Graph Health & Cycle Verification:** Verifies 0 circular dependencies and 0 dangling edges in DAG workflows.\n3. **Gate 3: Unit Test Suite:** Executes full Python test suite with 100% pass requirement.\n4. **Gate 4: Release Package Verification:** Builds standalone CLI zipapp and npm package tarball.\n",
+      "properties": {
+        "path": "docs/engineering/TESTING_GUIDE.md",
+        "category": "engineering",
+        "size_bytes": 811
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:docs__engineering__REPO_ORGANIZATION_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Repo Organization",
+      "content": "# AgentGraph Repository Organization & Branch Governance\n\n## 1. Directory Structure\n\n```\nAgentGraph/\n├── .agentgraph/                     # Initialized workspace configuration\n│   ├── config.json                  # Workspace settings\n│   ├── agents/                      # Role JSON specifications\n│   ├── workflows/                   # Workflow DAG JSON definitions\n│   ├── rules/                       # Invariant JSON policies\n│   ├── knowledge/                   # Markdown architecture docs\n│   └── graph.db                     # SQLite graph database\n├── .github/\n│   ├── CODEOWNERS                   # Assigns @raybayly as sole required reviewer\n│   ├── pull_request_template.md     # PR requirements & checklist\n│   └── workflows/\n│       ├── quality_gates.yml        # CI test & quality gates\n│       ├── branch_compliance.yml    # Branch verification & PR checks\n│       └── npm-publish.yml          # Release publishing to npm\n├── agentgraph/                      # Core Python Engine\n│   ├── core/                        # Graph engine, storage, BM25 search, traversal\n│   ├── sync/                        # Filesystem crawler, AST parser, Markdown parser\n│   ├── init/                   ",
+      "properties": {
+        "path": "docs/engineering/REPO_ORGANIZATION.md",
+        "category": "engineering",
+        "size_bytes": 2394
+      },
+      "is_current": true
+    },
+    {
+      "id": "doc:README_md",
+      "plane": "knowledge",
+      "type": "knowledge_doc",
+      "label": "Readme",
+      "content": "# AgentGraph: Multi-Plane Cognitive Substrate & Knowledge Graph Engine for AI Agents\n\n[![VS Code Marketplace](https://img.shields.io/badge/VS%20Marketplace-AgentGraph-blue.svg)](https://marketplace.visualstudio.com/items?itemName=BaylyAI.agentgraph-vscode)\n[![npm version](https://img.shields.io/npm/v/agentgraph-node-plugin.svg)](https://www.npmjs.com/package/agentgraph-node-plugin)\n[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)\n[![Zero External Dependencies](https://img.shields.io/badge/dependencies-zero%20external-success.svg)](#)\n[![Model Context Protocol](https://img.shields.io/badge/MCP-Claude%20Desktop%20%7C%20Claude%20Code-purple.svg)](docs/engineering/CLAUDE_MARKETPLACE.md)\n\n> **Standalone, high-performance multi-plane graph substrate, BM25 search engine, topological DAG resolver, and AST dependency indexer for autonomous AI agents, multi-agent workflows, CLI, Node.js applications, and Visual Studio Code.**\n\n---\n\n## 🚀 Quick Links & Downloads\n\n- 🧩 **VS Code Extension & Marketplace Release:** [`release/vscode/plugin/agentgraph-vscode-1.0.0.vsix`](release/vscode/plugin/) | [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=BaylyAI.a",
+      "properties": {
+        "path": "README.md",
+        "category": "root",
+        "size_bytes": 7989
+      },
+      "is_current": true
+    },
+    {
+      "id": "role:developer",
+      "plane": "rules",
+      "type": "agent_role",
+      "label": "Developer Agent",
+      "content": "Full access software engineer role permitted to run commands, edit files, and build.",
+      "properties": {
+        "role_name": "developer",
+        "permitted_tools": [
+          "read_file",
+          "write_file",
+          "run_command",
+          "search_code"
+        ],
+        "forbidden_tools": [
+          "direct_push_master"
+        ]
+      },
+      "is_current": true
+    },
+    {
+      "id": "role:reader",
+      "plane": "rules",
+      "type": "agent_role",
+      "label": "Read-Only Agent",
+      "content": "Read-only inspection role strictly prohibited from modifying code or executing commands.",
+      "properties": {
+        "role_name": "reader",
+        "permitted_tools": [
+          "read_file",
+          "search_code"
+        ],
+        "forbidden_tools": [
+          "run_command",
+          "write_file",
+          "git_push"
+        ]
+      },
+      "is_current": true
+    }
+  ],
+  "edges": [],
+  "metadata": {
+    "repo_root": "/Users/raybayly/Development/OpenSource/AgentGraph",
+    "synced_sources": 12
+  }
+}
