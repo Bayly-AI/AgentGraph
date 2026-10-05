@@ -86,7 +86,18 @@ const stats = await client.getStats();
 
 ---
 
-## 4. MCP Server & Claude Integration (`agentgraph.mcp`)
+## 4. Visual Studio Code Plugin Architecture (`packages/vscode-extension`)
+
+The VS Code extension `agentgraph-vscode` integrates AgentGraph deeply into the developer IDE:
+
+- **Activity Bar 5-Plane Tree:** Interactive TreeDataProviders for exploring nodes, relationships, and metadata per plane.
+- **Visual Mermaid Webview:** Real-time webview canvas rendering Mermaid topologies with zoom and plane filters.
+- **Command Integration:** VS Code commands and quickpicks for BM25 search, DAG cycle validation, dependency resolution, and Quality Gates.
+- **Auto-Sync:** Real-time event hooks on file save to keep the SQLite graph substrate continuously updated.
+
+---
+
+## 5. MCP Server & Claude Integration (`agentgraph.mcp`)
 
 AgentGraph implements the standard Model Context Protocol (MCP) JSON-RPC 2.0 stdio specification.
 
@@ -101,10 +112,11 @@ Exposed MCP Tools:
 
 ---
 
-## 5. Quality Gates & Release Packaging
+## 6. Quality Gates & Release Packaging
 
-AgentGraph enforces a 4-Gate Quality Verification standard:
+AgentGraph enforces a 4-Gate Quality Verification standard across all 3 release targets:
 1. **Gate 1: Workspace Synchronization:** Full filesystem crawl and graph indexing.
 2. **Gate 2: Topology Health:** Strict acyclic DAG verification (0 cycles, 0 dangling edges).
-3. **Gate 3: Unit Test Suite:** 100% test passing rate across all modules.
-4. **Gate 4: Build Package Verification:** Standalone zipapp executable (`release/python/cli/agentgraph`) and npm tarball.
+3. **Gate 3: Unit Test Suite:** 100% test passing rate across all modules and extensions.
+4. **Gate 4: Build Package Verification:** Standalone zipapp executable (`release/python/cli/agentgraph`), npm tarball (`release/javascript/node/plugin/`), and VS Code Marketplace VSIX package (`release/vscode/plugin/agentgraph-vscode-1.0.0.vsix`).
+

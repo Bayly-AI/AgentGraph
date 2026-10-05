@@ -1,0 +1,206 @@
+{
+  "name": "agentgraph-vscode",
+  "displayName": "AgentGraph: Multi-Plane AI Knowledge Graph & DAG Engine",
+  "type": "module",
+  "description": "Multi-plane cognitive substrate, DAG dependency resolver, BM25 search, and interactive Mermaid graph visualization for autonomous AI agents in VS Code.",
+  "version": "1.0.0",
+  "publisher": "BaylyAI",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Programming Languages",
+    "Visualization",
+    "Linters",
+    "Other"
+  ],
+  "keywords": [
+    "agentgraph",
+    "ai-agents",
+    "knowledge-graph",
+    "dag",
+    "mcp",
+    "mermaid",
+    "dependency-graph",
+    "claude"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "workspaceContains:.agentgraph",
+    "workspaceContains:AGENTS.md"
+  ],
+  "main": "./dist/extension.js",
+  "icon": "media/agentgraph.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bayly-AI/AgentGraph.git"
+  },
+  "homepage": "https://github.com/Bayly-AI/AgentGraph",
+  "bugs": {
+    "url": "https://github.com/Bayly-AI/AgentGraph/issues"
+  },
+  "license": "GPL-3.0",
+  "galleryBanner": {
+    "color": "#0d1117",
+    "theme": "dark"
+  },
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "agentgraph-explorer",
+          "title": "AgentGraph",
+          "icon": "media/agentgraph.svg"
+        }
+      ]
+    },
+    "views": {
+      "agentgraph-explorer": [
+        {
+          "id": "agentgraph.statsView",
+          "name": "Graph Health & Substrate",
+          "type": "tree"
+        },
+        {
+          "id": "agentgraph.agentsView",
+          "name": "Agents Plane",
+          "type": "tree"
+        },
+        {
+          "id": "agentgraph.workflowsView",
+          "name": "Workflows & DAGs",
+          "type": "tree"
+        },
+        {
+          "id": "agentgraph.rulesView",
+          "name": "Rules & Invariants",
+          "type": "tree"
+        },
+        {
+          "id": "agentgraph.knowledgeView",
+          "name": "Knowledge Plane",
+          "type": "tree"
+        },
+        {
+          "id": "agentgraph.codeView",
+          "name": "Code AST Plane",
+          "type": "tree"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "agentgraph.sync",
+        "title": "AgentGraph: Synchronize Graph Substrate",
+        "category": "AgentGraph",
+        "icon": "$(sync)"
+      },
+      {
+        "command": "agentgraph.query",
+        "title": "AgentGraph: Search Graph (BM25)",
+        "category": "AgentGraph",
+        "icon": "$(search)"
+      },
+      {
+        "command": "agentgraph.validate",
+        "title": "AgentGraph: Validate DAG & Detect Cycles",
+        "category": "AgentGraph",
+        "icon": "$(pass)"
+      },
+      {
+        "command": "agentgraph.resolve",
+        "title": "AgentGraph: Resolve DAG Dependencies",
+        "category": "AgentGraph",
+        "icon": "$(list-ordered)"
+      },
+      {
+        "command": "agentgraph.exportMermaid",
+        "title": "AgentGraph: View Interactive Mermaid Graph",
+        "category": "AgentGraph",
+        "icon": "$(graph)"
+      },
+      {
+        "command": "agentgraph.qualityGate",
+        "title": "AgentGraph: Run Quality Gates Audit",
+        "category": "AgentGraph",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "agentgraph.refresh",
+        "title": "AgentGraph: Refresh Planes",
+        "category": "AgentGraph",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "agentgraph.openNode",
+        "title": "AgentGraph: Open Node Target",
+        "category": "AgentGraph"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "agentgraph.refresh",
+          "when": "view =~ /^agentgraph\\./",
+          "group": "navigation@1"
+        },
+        {
+          "command": "agentgraph.sync",
+          "when": "view =~ /^agentgraph\\./",
+          "group": "navigation@2"
+        },
+        {
+          "command": "agentgraph.validate",
+          "when": "view =~ /^agentgraph\\./",
+          "group": "navigation@3"
+        },
+        {
+          "command": "agentgraph.exportMermaid",
+          "when": "view =~ /^agentgraph\\./",
+          "group": "navigation@4"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "agentgraph.resolve",
+          "when": "viewItem == graphNode",
+          "group": "inline"
+        },
+        {
+          "command": "agentgraph.openNode",
+          "when": "viewItem == graphNode",
+          "group": "inline"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "AgentGraph",
+      "properties": {
+        "agentgraph.cliPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the agentgraph CLI binary. If left empty, AgentGraph searches workspace releases, PATH, or system Python."
+        },
+        "agentgraph.pythonPath": {
+          "type": "string",
+          "default": "python3",
+          "description": "Python interpreter used to run AgentGraph when standalone binary is not found."
+        },
+        "agentgraph.dbPath": {
+          "type": "string",
+          "default": ".agentgraph/graph.db",
+          "description": "Relative or absolute path to the SQLite graph database."
+        },
+        "agentgraph.autoSyncOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically synchronize the knowledge graph when AGENTS.md, rules, or workflows are saved."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node --test test/extension.test.js"
+  }
+}

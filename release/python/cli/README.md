@@ -1,16 +1,18 @@
 # AgentGraph: Multi-Plane Cognitive Substrate & Knowledge Graph Engine for AI Agents
 
+[![VS Code Marketplace](https://img.shields.io/badge/VS%20Marketplace-AgentGraph-blue.svg)](https://marketplace.visualstudio.com/items?itemName=BaylyAI.agentgraph-vscode)
 [![npm version](https://img.shields.io/npm/v/agentgraph-node-plugin.svg)](https://www.npmjs.com/package/agentgraph-node-plugin)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 [![Zero External Dependencies](https://img.shields.io/badge/dependencies-zero%20external-success.svg)](#)
 [![Model Context Protocol](https://img.shields.io/badge/MCP-Claude%20Desktop%20%7C%20Claude%20Code-purple.svg)](docs/engineering/CLAUDE_MARKETPLACE.md)
 
-> **Standalone, high-performance multi-plane graph substrate, BM25 search engine, topological DAG resolver, and AST dependency indexer for autonomous AI agents, multi-agent workflows, CLI, and Node.js applications.**
+> **Standalone, high-performance multi-plane graph substrate, BM25 search engine, topological DAG resolver, and AST dependency indexer for autonomous AI agents, multi-agent workflows, CLI, Node.js applications, and Visual Studio Code.**
 
 ---
 
 ## 🚀 Quick Links & Downloads
 
+- 🧩 **VS Code Extension & Marketplace Release:** [`release/vscode/plugin/agentgraph-vscode-1.0.0.vsix`](release/vscode/plugin/) | [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=BaylyAI.agentgraph-vscode)
 - 📦 **NPM Node.js Plugin Package:** [`npm install agentgraph-node-plugin`](https://www.npmjs.com/package/agentgraph-node-plugin)
 - 🤖 **Claude Desktop & Claude Code MCP Integration:** [CLAUDE_MARKETPLACE.md](docs/engineering/CLAUDE_MARKETPLACE.md)
 - 🐍 **Standalone Python CLI:** [`./release/python/cli/agentgraph`](release/python/cli/)
@@ -151,6 +153,25 @@ const executionOrder = await graph.resolveDependencies("workflow:feature_deliver
 const health = await graph.validate();
 console.log("Graph Valid:", health.is_valid);
 ```
+
+---
+
+## 🧩 Visual Studio Code Extension & Marketplace Release
+
+Install AgentGraph directly in VS Code to get an interactive multi-plane graph navigator, live DAG topology health checks, and instant search:
+
+```bash
+# Install local release package
+code --install-extension release/vscode/plugin/agentgraph-vscode-1.0.0.vsix
+```
+
+### Key VS Code Extension Capabilities
+- 🌐 **5-Plane Explorer Tree:** Browse Agents, Workflows, Rules, Knowledge, and Code AST hierarchy in the Activity Bar.
+- 🎨 **Interactive Visual Topology:** Embedded Mermaid.js graph webview with zoom, pan, and plane filtering.
+- 📊 **Substrate Health & Metric Inspector:** Instant DAG cycle detection, dangling edge warnings, and node counts.
+- 🔍 **BM25 Search & Jump:** Command Palette quick search to jump directly into governed code, rules, or workflows.
+- 🔄 **Auto-Sync on Save:** Automatically keeps graph substrate in sync when files are updated.
+
 
 ---
 
