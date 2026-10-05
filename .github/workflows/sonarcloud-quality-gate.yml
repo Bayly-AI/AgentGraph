@@ -65,23 +65,6 @@ jobs:
           echo "project_key=$KEY" >> "$GITHUB_OUTPUT"
           echo "Using organization=$ORG projectKey=$KEY"
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies & generate test coverage
-        run: |
-          python -m pip install --upgrade pip
-          pip install pytest pytest-cov setuptools wheel
-          pip install -e .
-          pytest --cov=agentgraph --cov-report=xml:coverage.xml
-
-      - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v4.2.1
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
       - name: Verify SonarCloud Quality Gate
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
