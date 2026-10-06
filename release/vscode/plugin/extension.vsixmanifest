@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="agentgraph-vscode" Version="1.0.0" Publisher="BaylyAI"/>
+    <DisplayName>AgentGraph: Multi-Plane AI Knowledge Graph &amp; DAG Engine</DisplayName>
+    <Description xml:space="preserve">Multi-plane cognitive substrate, DAG dependency resolver, BM25 search, and interactive Mermaid graph visualization for autonomous AI agents in VS Code.</Description>
+    <Tags>agentgraph,ai-agents,knowledge-graph,dag,mcp,mermaid,dependency-graph,claude</Tags>
+    <Categories>Machine Learning,Programming Languages,Visualization,Linters,Other</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Badges></Badges>
+    <Properties>
+      <Property Id="Microsoft.VisualStudio.Code.Engine" Value="^1.80.0" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionDependencies" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionPack" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.LocalizedLanguages" Value="" />
+      <Property Id="Microsoft.VisualStudio.Code.ExtensionKind" Value="workspace,web" />
+    </Properties>
+    <License>extension/LICENSE</License>
+    <Icon>extension/media/agentgraph.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/media/agentgraph.png" Addressable="true" />
+  </Assets>
+</PackageManifest>

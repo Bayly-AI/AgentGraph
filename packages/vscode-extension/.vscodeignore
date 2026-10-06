@@ -1,0 +1,6 @@
+.vscode/**
+.vscode-test/**
+test/**
+.agentgraph/**
+**/*.map
+.DS_Store

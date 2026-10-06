@@ -1,0 +1,29 @@
+name: Publish AgentGraph Node.js Plugin to npm
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Build Node Plugin & Release Artifacts
+        run: |
+          python3 scripts/build_node_plugin.py
+
+      - name: Publish to npm Registry
+        working-directory: ./release/javascript/node/plugin
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

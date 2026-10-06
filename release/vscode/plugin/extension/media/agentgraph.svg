@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Multi-Plane Graph Icon -->
+  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+  <polyline points="2 17 12 22 22 17" />
+  <polyline points="2 12 12 17 22 12" />
+  <circle cx="12" cy="7" r="1.5" fill="currentColor" />
+  <circle cx="7" cy="9.5" r="1.2" fill="currentColor" />
+  <circle cx="17" cy="9.5" r="1.2" fill="currentColor" />
+  <circle cx="12" cy="17" r="1.5" fill="currentColor" />
+</svg>

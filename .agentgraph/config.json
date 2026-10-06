@@ -1,0 +1,15 @@
+{
+  "project_name": "AgentGraph Workspace",
+  "version": "1.0.0",
+  "db_path": ".agentgraph/graph.db",
+  "scan_directories": [
+    "AGENTS.md",
+    ".agentgraph/rules",
+    ".agentgraph/agents",
+    ".agentgraph/workflows",
+    ".agentgraph/knowledge",
+    "docs",
+    "src"
+  ],
+  "pre_commit_hook": true
+}

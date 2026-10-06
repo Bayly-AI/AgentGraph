@@ -1,0 +1,46 @@
+name: AgentGraph Quality Gates & Release Verification
+
+on:
+  push:
+    branches: [ main, master, development ]
+  pull_request:
+    branches: [ main, master, development ]
+
+jobs:
+  quality_gates:
+    name: AgentGraph Quality Gates & Test Suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.x"
+
+      - name: Install Python Package
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel
+          pip install -e .
+
+      - name: Gate 1-4: Execute AgentGraph Quality Gates Suite
+        run: |
+          python -m agentgraph quality-gate
+
+      - name: Verify Python Standalone Build Artifacts
+        run: |
+          python scripts/build.py
+          ls -la release/python/cli/
+
+      - name: Verify Node.js Plugin Build Artifacts & Tests
+        run: |
+          python scripts/build_node_plugin.py
+          ls -la release/javascript/node/plugin/
