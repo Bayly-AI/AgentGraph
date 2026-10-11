@@ -1,0 +1,20 @@
+{
+  "schema_version": "hath0r.iac.salting/1",
+  "image_name": "agentgraph",
+  "mutable_tag": "711387127111.dkr.ecr.us-east-1.amazonaws.com/agentgraph:latest",
+  "pinned_digest": "sha256:9610adf5f7dab13887bac5f0bd9367fe2e38d60a04944e576b192ee348d143a9",
+  "pinned_ref": "711387127111.dkr.ecr.us-east-1.amazonaws.com/agentgraph@sha256:9610adf5f7dab13887bac5f0bd9367fe2e38d60a04944e576b192ee348d143a9",
+  "timestamp": "2026-10-11T16:22:04Z",
+  "attestation": {
+    "builder": "hath0r-cicccdct-runner",
+    "predicate_type": "https://slsa.dev/provenance/v1",
+    "signature_provider": "cosign",
+    "verified": true,
+    "rekor_bundle_logged": true
+  },
+  "secret_salting": {
+    "provider": "aws_secrets_manager",
+    "path": "/hath0r/secrets/agentgraph",
+    "injected_at_runtime": true
+  }
+}
