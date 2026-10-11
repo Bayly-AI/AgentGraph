@@ -27,3 +27,8 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# Hath0r runtime
+.hath0r/events.jsonl
+.hath0r/finops/
+
