@@ -1,6 +1,6 @@
 # AgentGraph: Multi-Plane Cognitive Substrate & Knowledge Graph Engine for AI Agents
 
-[![VS Code Marketplace](https://img.shields.io/badge/VS%20Marketplace-AgentGraph-blue.svg)](https://marketplace.visualstudio.com/items?itemName=bayly-ai.agentgraph-vscode)
+[![VS Code Marketplace](https://img.shields.io/badge/VS%20Marketplace-AgentGraph-blue.svg)](https://marketplace.visualstudio.com/items?itemName=BaylyAI.agentgraph-vscode)
 [![npm version](https://img.shields.io/npm/v/agentgraph-node-plugin.svg)](https://www.npmjs.com/package/agentgraph-node-plugin)
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](LICENSE)
 [![Zero External Dependencies](https://img.shields.io/badge/dependencies-zero%20external-success.svg)](#)
@@ -12,8 +12,8 @@
 
 ## 🚀 Quick Links & Downloads
 
-- 🧩 **VS Code Extension & Marketplace Release:** [`release/vscode/plugin/agentgraph-vscode-1.0.0.vsix`](release/vscode/plugin/) | [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=bayly-ai.agentgraph-vscode)
-- 📦 **NPM Node.js Plugin Package:** [`npm install agentgraph-node-plugin`](https://www.npmjs.com/package/agentgraph-node-plugin)
+- 🧩 **VS Code Extension & Marketplace Release:** [`release/vscode/plugin/agentgraph-vscode-1.0.0.vsix`](release/vscode/plugin/) | [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=BaylyAI.agentgraph-vscode)
+- 📦 **Node.js Plugin Package:** [`npm install @bayly-ai/agentgraph-node-plugin`](https://github.com/Bayly-AI/AgentGraph/pkgs/npm/agentgraph-node-plugin) | [`npm install agentgraph-node-plugin`](https://www.npmjs.com/package/agentgraph-node-plugin)
 - 🤖 **Claude Desktop & Claude Code MCP Integration:** [CLAUDE_MARKETPLACE.md](docs/engineering/CLAUDE_MARKETPLACE.md)
 - 🐍 **Standalone Python CLI:** [`./release/python/cli/agentgraph`](release/python/cli/)
 - 📖 **Technical Architecture & Developer Guide:** [README.TECHNICAL.md](README.TECHNICAL.md)
@@ -134,6 +134,10 @@ agentgraph export --format mermaid
 Install in any Node.js / TypeScript project:
 
 ```bash
+# GitHub Packages
+npm install @bayly-ai/agentgraph-node-plugin
+
+# Or npmjs
 npm install agentgraph-node-plugin
 ```
 
