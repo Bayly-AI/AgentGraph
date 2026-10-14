@@ -24,6 +24,10 @@ Features:
 ## 📦 Installation
 
 ```bash
+# Install from GitHub Packages
+npm install @bayly-ai/agentgraph-node-plugin
+
+# Or install from npmjs
 npm install agentgraph-node-plugin
 ```
 

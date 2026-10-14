@@ -1,18 +1,53 @@
-name: Publish AgentGraph Node.js Plugin to npm
+name: Publish AgentGraph Node.js Plugin
 
 on:
   release:
-    types: [created]
+    types: [published, created]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
-  publish:
+  publish-github-packages:
+    name: Publish to GitHub Packages
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node.js for GitHub Packages
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@bayly-ai'
+
+      - name: Build Node Plugin & Release Artifacts
+        run: |
+          python3 scripts/build_node_plugin.py
+
+      - name: Publish to GitHub Packages
+        working-directory: ./release/javascript/node/plugin
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-npm-registry:
+    name: Publish to npmjs Registry
+    runs-on: ubuntu-latest
+    needs: publish-github-packages
+    if: ${{ secrets.NPM_TOKEN != '' }}
+    continue-on-error: true
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js for npmjs
         uses: actions/setup-node@v4
         with:
           node-version: '22.x'
@@ -22,8 +57,17 @@ jobs:
         run: |
           python3 scripts/build_node_plugin.py
 
-      - name: Publish to npm Registry
+      - name: Configure and Publish to npmjs
         working-directory: ./release/javascript/node/plugin
-        run: npm publish --access public
+        run: |
+          node -e '
+            const fs = require("fs");
+            const pkg = JSON.parse(fs.readFileSync("package.json"));
+            pkg.name = "agentgraph-node-plugin";
+            delete pkg.publishConfig;
+            fs.writeFileSync("package.json", JSON.stringify(pkg, null, 2) + "\n");
+          '
+          npm publish --access public || echo "Notice: npmjs publish skipped or already exists"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
