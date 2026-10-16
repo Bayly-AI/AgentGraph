@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-AgentGraph",
-  "timestamp": "2026-10-11T18:30:10.426921+00:00",
+  "timestamp": "2026-10-16T15:24:53.327168+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -48,6 +48,19 @@
       "properties": {
         "path": "release/vscode/plugin/docs/AGENTS.md",
         "subsystem": "docs"
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-cli-feature-standard-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-FEATURE-STANDARD-001",
+      "content": "Governance policy rule CR-CLI-FEATURE-STANDARD-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-CLI-FEATURE-STANDARD-001",
+        "priority": 4,
+        "restricted_actions": []
       },
       "is_current": true
     },
@@ -151,7 +164,120 @@
       "properties": {
         "path": "README.md",
         "category": "root",
-        "size_bytes": 7989
+        "size_bytes": 8183
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:rule:cr-cli-entry-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Start with CLI Rule",
+      "content": "Always start with hath0r operator CLI before inventing ad-hoc actions.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "rule",
+          "governance",
+          "cli"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:rule:cr-bai-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Promotion Path Policy",
+      "content": "Promotion order: local -> development -> testing -> staging -> master.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "rule",
+          "governance",
+          "ci"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:rule:cr-memory-compound-001",
+      "plane": "memory",
+      "type": "rule",
+      "label": "Mandatory MemoryGraph Compounding Rule",
+      "content": "Every project repo must maintain .hath0r/memory/graph.json and every task must compound knowledge prior to announcing complete.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "rule",
+          "governance",
+          "memorygraph",
+          "cr-memory-compound-001"
+        ],
+        "importance": 1.0
+      },
+      "is_current": true
+    },
+    {
+      "id": "concept:tri-graph",
+      "plane": "memory",
+      "type": "concept",
+      "label": "Tri-Graph Substrate",
+      "content": "Three-layer cognitive graph architecture: KnowledgeGraph, ContextGraph, MemoryGraph.",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "architecture",
+          "substrate",
+          "tri-graph"
+        ],
+        "importance": 0.9
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:fact:repo-agentgraph-orientation",
+      "plane": "memory",
+      "type": "fact",
+      "label": "AgentGraph Repository Memory Orientation",
+      "content": "AgentGraph: [![VS Code Marketplace](https://img.shields.io/badge/VS%20Marketplace-AgentGraph-blue.svg)](https://marketplace.visualstudio.com/items?itemName=BaylyAI.agentgraph-vscode) [![npm version](https://img.shields.io/npm/v/agentgraph-node-plugin.svg)](https://www.npmjs.com/package/agentgraph-node-plugin) [![License](https://img.shields.io/badge/license-GPLv3-blue.s",
+      "properties": {
+        "source": "local_memory",
+        "tags": [
+          "orientation",
+          "repository",
+          "agentgraph",
+          "cr-memory-compound-001",
+          "fact",
+          "compounded"
+        ],
+        "importance": 0.85
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261016-123220-3ddf54",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261016-123220-3ddf54",
+      "content": "Micro Session sess-20261016-123220-3ddf54 [active] | Focus: Repository orientation verified for AgentGraph | Reads: 4, Writes: 5 | Entries: Compounded fact:repo-agentgraph-orientation: AgentGraph Repository Memory Orientation",
+      "properties": {
+        "session_id": "sess-20261016-123220-3ddf54",
+        "prior_session_id": null,
+        "parent_session_id": null,
+        "read_count": 4,
+        "write_count": 5,
+        "status": "active",
+        "byte_size": 1761,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "active"
+        ],
+        "importance": 0.75
       },
       "is_current": true
     },
@@ -196,9 +322,88 @@
       "is_current": true
     }
   ],
-  "edges": [],
+  "edges": [
+    {
+      "source": "memory:rule:cr-cli-entry-001",
+      "target": "concept:tri-graph",
+      "relation": "ENFORCES",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-memory-compound-001",
+      "target": "concept:tri-graph",
+      "relation": "ENFORCES",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-agentgraph-orientation",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-agentgraph-orientation",
+      "target": "memory:rule:cr-memory-compound-001",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261016-123220-3ddf54",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-agentgraph-orientation",
+      "target": "memory:session:sess-20261016-123220-3ddf54",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-cli-feature-standard-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-cli-entry-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-bai-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-memory-compound-001",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "concept:tri-graph",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:fact:repo-agentgraph-orientation",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261016-123220-3ddf54",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    }
+  ],
   "metadata": {
     "repo_root": "/Users/raybayly/Development/OpenSource/AgentGraph",
-    "synced_sources": 12
+    "synced_sources": 13
   }
 }
