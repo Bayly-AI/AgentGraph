@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-AgentGraph",
-  "timestamp": "2026-10-28T17:45:14.100145+00:00",
+  "timestamp": "2026-10-28T18:12:52.286187+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -300,18 +300,18 @@
       "id": "memory:episode:clean-repo-agentgraph",
       "plane": "memory",
       "type": "episode",
-      "label": "Clean Repo Lifecycle (AgentGraph)",
-      "content": "Executed 13-step clean-repo hygiene, branch merges, and knowledge sync for AgentGraph.",
+      "label": "Clean Repo Development Sync (AgentGraph)",
+      "content": "Verified all changes merged into development and synced for AgentGraph.",
       "properties": {
         "source": "local_memory",
         "tags": [
           "clean-repo",
-          "hygiene",
+          "development",
           "agentgraph",
           "episode",
           "compounded"
         ],
-        "importance": 0.75
+        "importance": 0.8
       },
       "is_current": true
     },
@@ -385,7 +385,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-agentgraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:a01a431fdd3db1110e35eefb9b598a42a828bcca70a62db0c351faf3e596a731"
+          ".hath0r/evals/latest.json": "sha256:936c3b1a81c932f944a8623a46f33498c9b104445ff86913c3459bcd920c9a7c"
         },
         "source": "local_memory",
         "tags": [
@@ -404,15 +404,15 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261016-123220-3ddf54",
-      "content": "Micro Session sess-20261016-123220-3ddf54 [completed] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 10, Writes: 15 | Entries: Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=1.00, PASS)",
+      "content": "Micro Session sess-20261016-123220-3ddf54 [completed] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 11, Writes: 17 | Entries: Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=1.00, PASS)",
       "properties": {
         "session_id": "sess-20261016-123220-3ddf54",
         "prior_session_id": null,
         "parent_session_id": null,
-        "read_count": 10,
-        "write_count": 15,
+        "read_count": 11,
+        "write_count": 17,
         "status": "completed",
-        "byte_size": 1928,
+        "byte_size": 1892,
         "source": "local_memory",
         "tags": [
           "session",
