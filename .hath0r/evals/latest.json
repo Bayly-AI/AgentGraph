@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-181251-8ed221",
+  "eval_id": "eval-20261028-181941-ff6778",
   "task_id": "clean-repo-agentgraph",
   "issue_number": null,
   "repo_name": "AgentGraph",
   "branch": "development",
-  "evaluated_at": "2026-10-28T18:12:51.884358+00:00",
-  "duration_ms": 290.8,
+  "evaluated_at": "2026-10-28T18:19:41.520467+00:00",
+  "duration_ms": 896.57,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -64,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261016-123220-3ddf54",
-      "session_reads": 11,
-      "session_writes": 16,
-      "session_bytes": 1877,
+      "session_reads": 12,
+      "session_writes": 17,
+      "session_bytes": 1892,
       "within_capsule_budget": true,
-      "latency_ms": 106.38,
-      "taguchi_quality_loss": 0.0001,
-      "snr_db": 25.48
+      "latency_ms": 347.2,
+      "taguchi_quality_loss": 0.0015,
+      "snr_db": 15.21
     },
     "adversarial": {
       "score": 1.0,
@@ -96,5 +96,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:797ca9099ccd96d5906cb1087384d4de6b1d534676e7552958f2b52c0cb531f2"
+  "content_hash": "sha256:98a4b0705f7f360201571b02f6ecd9880ad3cc215e0ed3b8d5113d08dca11dd7"
 }
