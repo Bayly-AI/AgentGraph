@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-152004-99dcc3",
-  "task_id": "clean-repo-agentgraph",
+  "eval_id": "eval-20261028-174513-3fd227",
+  "task_id": "eval-baseline-agentgraph",
   "issue_number": null,
   "repo_name": "AgentGraph",
   "branch": "development",
-  "evaluated_at": "2026-10-28T15:20:04.953245+00:00",
-  "duration_ms": 196.53,
+  "evaluated_at": "2026-10-28T17:45:13.854763+00:00",
+  "duration_ms": 204.48,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 5,
+          "compounded_nodes_count": 6,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -64,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261016-123220-3ddf54",
-      "session_reads": 8,
-      "session_writes": 11,
-      "session_bytes": 1695,
+      "session_reads": 10,
+      "session_writes": 14,
+      "session_bytes": 1932,
       "within_capsule_budget": true,
-      "latency_ms": 75.09,
+      "latency_ms": 77.12,
       "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.51
+      "snr_db": 28.28
     },
     "adversarial": {
       "score": 1.0,
@@ -85,10 +85,10 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "clean-repo-agentgraph",
+      "task_id": "eval-baseline-agentgraph",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for AgentGraph",
-      "compounded_nodes_count": 5,
+      "compounded_nodes_count": 6,
       "consensus_score": 1.0
     }
   },
@@ -96,5 +96,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:7002d92842c5a1659a3a9b9eb4135047ff479d4b9091f5d3c3306d9f56509b9c"
+  "content_hash": "sha256:71506cdfeaf2bd56fa9e5731d145c31d939259f7a8a0a63052c1286acd55f5b9"
 }

@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-142110-e65c16",
+  "eval_id": "eval-20261028-174513-3fd227",
   "task_id": "eval-baseline-agentgraph",
   "issue_number": null,
   "repo_name": "AgentGraph",
   "branch": "development",
-  "evaluated_at": "2026-10-28T14:21:10.532574+00:00",
-  "duration_ms": 203.11,
+  "evaluated_at": "2026-10-28T17:45:13.854763+00:00",
+  "duration_ms": 204.48,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 4,
+          "compounded_nodes_count": 6,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -64,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261016-123220-3ddf54",
-      "session_reads": 7,
-      "session_writes": 8,
-      "session_bytes": 2043,
+      "session_reads": 10,
+      "session_writes": 14,
+      "session_bytes": 1932,
       "within_capsule_budget": true,
-      "latency_ms": 79.06,
+      "latency_ms": 77.12,
       "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.06
+      "snr_db": 28.28
     },
     "adversarial": {
       "score": 1.0,
@@ -88,7 +88,7 @@
       "task_id": "eval-baseline-agentgraph",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for AgentGraph",
-      "compounded_nodes_count": 4,
+      "compounded_nodes_count": 6,
       "consensus_score": 1.0
     }
   },
@@ -96,5 +96,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:4bc7d35023161566ea08827da7893508482971f83296b5cd6e1a881f97f4fd65"
+  "content_hash": "sha256:71506cdfeaf2bd56fa9e5731d145c31d939259f7a8a0a63052c1286acd55f5b9"
 }
