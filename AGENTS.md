@@ -7,6 +7,14 @@
 
 ---
 
+## CR-CLI-ENTRY-001: Start with the CLI (CRITICAL — Org-Wide · CANONICAL)
+
+1. **Start with the CLI (CRITICAL ENTRY GATE)**: When receiving ANY request or starting any task, agents **MUST ALWAYS START WITH THE OPERATOR CLI (`hath0r`)** rather than inventing ad-hoc scripts. Check `hath0r --help` and the matching `hath0r <group> --help` first.
+2. **Missing Capability Offer**: If the required connection, MCP, workflow, bot, or factory does not exist in `hath0r`, offer to register the missing capability, using the original request as the acceptance test.
+3. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.
+
+Canonical: `cr-cli-first-001` in the HATH0R-CLI governance docs (https://github.com/Bayly-AI/HATH0R-CLI, `docs/governance/`).
+
 ## 1. System Invariants & Inviolable Directives
 
 ### GRAPH-INV-001: Main & Development Branch Protection
