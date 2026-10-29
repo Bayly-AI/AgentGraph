@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-28T18:19:42.657628+00:00",
+  "updated_at": "2026-10-29T13:43:42.119373+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -167,7 +167,7 @@
       "updated_at": "2026-10-28T17:45:14.025903+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:22cea7ec3fa3227648ad089d31c9ca68a19ff9a06707f2fb8f05239f9bd88490"
+          ".hath0r/evals/latest.json": "sha256:f56b49fa7248daa24c8da80de54a5e9b0a8fc16fb6a74dcf6339d201e53221fa"
         }
       }
     },
@@ -191,7 +191,7 @@
       "updated_at": "2026-10-28T18:19:42.280603+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:22cea7ec3fa3227648ad089d31c9ca68a19ff9a06707f2fb8f05239f9bd88490"
+          ".hath0r/evals/latest.json": "sha256:f56b49fa7248daa24c8da80de54a5e9b0a8fc16fb6a74dcf6339d201e53221fa"
         }
       }
     },
@@ -219,6 +219,56 @@
         "write_count": 18,
         "status": "completed",
         "byte_size": 1892
+      }
+    },
+    {
+      "id": "eval:task-AgentGraph",
+      "type": "eval",
+      "label": "Task Evaluation task-AgentGraph (R=1.00, PASS)",
+      "content": "4-Tier Task Evaluation for task-AgentGraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
+      "importance": 0.85,
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "task-agentgraph",
+        "passed",
+        "compounded"
+      ],
+      "valid_from": "2026-10-29T13:43:41.366944+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-29T13:43:41.366944+00:00",
+      "updated_at": "2026-10-29T13:43:41.366944+00:00",
+      "metadata": {
+        "source_files": {
+          ".hath0r/evals/latest.json": "sha256:f56b49fa7248daa24c8da80de54a5e9b0a8fc16fb6a74dcf6339d201e53221fa"
+        }
+      }
+    },
+    {
+      "id": "session:sess-20261029-134338-7e5607",
+      "type": "session",
+      "label": "Micro Session sess-20261029-134338-7e5607",
+      "content": "Micro Session sess-20261029-134338-7e5607 [active] | Focus: Active working session in AgentGraph | Reads: 1, Writes: 2 | Entries: Harmonized rules, synced CLAUDE.md 1:1 with AGENTS.md (CR-CLAUDE-SYNC-001), initialized THREATMODEL.md, and upgraded workflows.; Compounded eval:task-AgentGraph: Task Evaluation task-AgentGraph (R=1.00, PASS)",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "active"
+      ],
+      "valid_from": "2026-10-29T13:43:38.952924+00:00",
+      "valid_to": null,
+      "is_current": true,
+      "created_at": "2026-10-29T13:43:38.952924+00:00",
+      "updated_at": "2026-10-29T13:43:41.377910+00:00",
+      "metadata": {
+        "session_id": "sess-20261029-134338-7e5607",
+        "prior_session_id": "sess-20261016-123220-3ddf54",
+        "parent_session_id": "sess-20261016-123220-3ddf54",
+        "read_count": 1,
+        "write_count": 2,
+        "status": "active",
+        "byte_size": 2036
       }
     }
   ],
@@ -396,8 +446,56 @@
       "weight": 1.0,
       "valid_from": "2026-10-28T15:20:05.131118+00:00",
       "is_current": true
+    },
+    {
+      "source": "session:sess-20261016-123220-3ddf54",
+      "target": "session:sess-20261029-134338-7e5607",
+      "relation": "PRECEDES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:43:38.956371+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261029-134338-7e5607",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-29T13:43:38.956371+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-AgentGraph",
+      "target": "concept:tri-graph",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:43:41.366944+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-AgentGraph",
+      "target": "rule:cr-memory-compound-001",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:43:41.366944+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-AgentGraph",
+      "target": "session:sess-20261029-134338-7e5607",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:43:41.366944+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:task-AgentGraph",
+      "target": "session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T13:43:41.380146+00:00",
+      "is_current": true
     }
   ],
-  "revision": 63,
-  "content_hash": "sha256:2e9a90802a5a76868f71d22016710913c3bedd35c98c8da0dc49a96aad9248e9"
+  "revision": 70,
+  "content_hash": "sha256:6b0d7b77583ee7656847db58ee9728dd81d683f024fcc0c1ce67ac0690b0d2f0"
 }

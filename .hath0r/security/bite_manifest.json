@@ -1,0 +1,54 @@
+{
+  "schema": "hath0r.security.bite_manifest/1",
+  "scope": "skills_and_rules",
+  "generated_at": "2026-10-29T13:43:37.058302+00:00",
+  "passed": true,
+  "summary": {
+    "total_audited": 4,
+    "clean": 4,
+    "risky": 0,
+    "dangerous": 0
+  },
+  "artifacts": [
+    {
+      "artifact_id": ".agents/skills/clean-repos/SKILL.md",
+      "artifact_type": "skill",
+      "path": ".agents/skills/clean-repos/SKILL.md",
+      "sha256": "d6a908561b50ce12c20ed2ded24ea309c148fece48387b502e171a8e393b096d",
+      "stated_purpose": "comprehensive standard operating procedure for cleaning repositories across the suite. activates whenever the user says \"clean repo\", \"clean repos\", \"clean repository\", \"clean repositories\", or reques",
+      "verdict": "CLEAN",
+      "behaviors": [],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": ".agents/skills/orient/SKILL.md",
+      "artifact_type": "skill",
+      "path": ".agents/skills/orient/SKILL.md",
+      "sha256": "823de19538265b54d114f7947dc57c2c0ddbfffb9837ba16460424d83211ae06",
+      "stated_purpose": "standard operating procedure for repository orientation. activates whenever the operator runs \"orient\", \"run orient\", \"orient repo\", \"orient repository\", or requests full repository orientation. cli c",
+      "verdict": "CLEAN",
+      "behaviors": [],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": "AGENTS.md",
+      "artifact_type": "rule_file",
+      "path": "AGENTS.md",
+      "sha256": "a191c9026b16fff76184d006e18981ea4be2828f025c068352c71208e25e62a8",
+      "stated_purpose": "# agents.md \u2014 agentgraph cognitive substrate & architecture directives > **repository:** bayly-ai/agentgraph > **framework:** agentgraph multi-plane engine cli command shell process run build test doc",
+      "verdict": "CLEAN",
+      "behaviors": [],
+      "invisible_unicode_count": 0
+    },
+    {
+      "artifact_id": "CLAUDE.md",
+      "artifact_type": "rule_file",
+      "path": "CLAUDE.md",
+      "sha256": "a191c9026b16fff76184d006e18981ea4be2828f025c068352c71208e25e62a8",
+      "stated_purpose": "# agents.md \u2014 agentgraph cognitive substrate & architecture directives > **repository:** bayly-ai/agentgraph > **framework:** agentgraph multi-plane engine cli command shell process run build test doc",
+      "verdict": "CLEAN",
+      "behaviors": [],
+      "invisible_unicode_count": 0
+    }
+  ]
+}
