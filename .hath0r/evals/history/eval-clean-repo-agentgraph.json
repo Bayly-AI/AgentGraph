@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261028-181941-ff6778",
+  "eval_id": "eval-20261029-141640-1fd160",
   "task_id": "clean-repo-agentgraph",
   "issue_number": null,
   "repo_name": "AgentGraph",
   "branch": "development",
-  "evaluated_at": "2026-10-28T18:19:41.520467+00:00",
-  "duration_ms": 896.57,
+  "evaluated_at": "2026-10-29T14:16:40.838166+00:00",
+  "duration_ms": 473.84,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -32,7 +32,7 @@
       "checks": {
         "version_valid": {
           "passed": true,
-          "version": "1.0.4",
+          "version": "1.0.5",
           "error": null
         },
         "agentgraph_valid": {
@@ -42,7 +42,7 @@
         },
         "memory_compounded": {
           "passed": true,
-          "compounded_nodes_count": 6,
+          "compounded_nodes_count": 7,
           "session_read_verified": true,
           "session_write_verified": true,
           "hashes_verified": true,
@@ -63,14 +63,14 @@
       "max_tokens": 50000,
       "estimated_usd": 0.0,
       "max_usd": 0.25,
-      "session_id": "sess-20261016-123220-3ddf54",
-      "session_reads": 12,
-      "session_writes": 17,
-      "session_bytes": 1892,
+      "session_id": "sess-20261029-134338-7e5607",
+      "session_reads": 4,
+      "session_writes": 8,
+      "session_bytes": 1760,
       "within_capsule_budget": true,
-      "latency_ms": 347.2,
-      "taguchi_quality_loss": 0.0015,
-      "snr_db": 15.21
+      "latency_ms": 206.06,
+      "taguchi_quality_loss": 0.0005,
+      "snr_db": 19.74
     },
     "adversarial": {
       "score": 1.0,
@@ -88,13 +88,38 @@
       "task_id": "clean-repo-agentgraph",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for AgentGraph",
-      "compounded_nodes_count": 6,
+      "compounded_nodes_count": 7,
       "consensus_score": 1.0
+    }
+  },
+  "evidence_trust_report": {
+    "schema": "hath0r.security.evidence_trust_report/1",
+    "tiers": {
+      "VERIFIED_EXECUTION": [
+        ".hath0r/evals/latest.json"
+      ],
+      "STATIC_AST_ANALYSIS": [
+        ".hath0r/agentgraph/snapshot.json",
+        ".hath0r/memory/graph.json",
+        ".hath0r/memory/hashes.json",
+        ".hath0r/memory/sessions/current.json",
+        ".hath0r/memory/sessions/latest.json",
+        ".hath0r/memory/sessions/sess-20261029-134338-7e5607.json",
+        "CLAUDE.md"
+      ],
+      "UNVERIFIED_FILE_PRESENCE": [
+        ".agentgraph/graph.db"
+      ]
+    },
+    "counts": {
+      "VERIFIED_EXECUTION": 1,
+      "STATIC_AST_ANALYSIS": 7,
+      "UNVERIFIED_FILE_PRESENCE": 1
     }
   },
   "blocking_reasons": [],
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:98a4b0705f7f360201571b02f6ecd9880ad3cc215e0ed3b8d5113d08dca11dd7"
+  "content_hash": "sha256:ea9d6c2412efad4bbdef6d779a888d14e44fbba208aa642f55c7b22a3b1e1d75"
 }

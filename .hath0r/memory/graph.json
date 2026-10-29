@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-29T13:58:49.741848+00:00",
+  "updated_at": "2026-10-29T14:16:41.441513+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -88,21 +88,21 @@
     {
       "id": "episode:clean-repo-agentgraph",
       "type": "episode",
-      "label": "Clean Repo Development Sync (AgentGraph)",
-      "content": "Verified all changes merged into development and synced for AgentGraph.",
-      "importance": 0.8,
+      "label": "Clean Repo Lifecycle (AgentGraph)",
+      "content": "Executed 13-step clean-repo hygiene, branch merges, and knowledge sync for AgentGraph.",
+      "importance": 0.75,
       "tags": [
         "clean-repo",
-        "development",
+        "hygiene",
         "agentgraph",
         "episode",
         "compounded"
       ],
-      "valid_from": "2026-10-28T18:12:51.712456+00:00",
+      "valid_from": "2026-10-29T14:16:39.777158+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-16T15:48:03.997000+00:00",
-      "updated_at": "2026-10-28T18:12:51.712456+00:00",
+      "updated_at": "2026-10-29T14:16:39.777158+00:00",
       "metadata": {}
     },
     {
@@ -167,7 +167,7 @@
       "updated_at": "2026-10-29T13:58:49.670574+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
+          ".hath0r/evals/latest.json": "sha256:8171a84301c4270b5179207c829366c3d8fa92a20f298ac4064fdd31da643100"
         }
       }
     },
@@ -184,14 +184,14 @@
         "passed",
         "compounded"
       ],
-      "valid_from": "2026-10-28T18:19:42.280603+00:00",
+      "valid_from": "2026-10-29T14:16:41.313788+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-28T15:20:05.117109+00:00",
-      "updated_at": "2026-10-28T18:19:42.280603+00:00",
+      "updated_at": "2026-10-29T14:16:41.313788+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
+          ".hath0r/evals/latest.json": "sha256:8171a84301c4270b5179207c829366c3d8fa92a20f298ac4064fdd31da643100"
         }
       }
     },
@@ -241,7 +241,7 @@
       "updated_at": "2026-10-29T13:43:41.366944+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
+          ".hath0r/evals/latest.json": "sha256:8171a84301c4270b5179207c829366c3d8fa92a20f298ac4064fdd31da643100"
         }
       }
     },
@@ -249,26 +249,26 @@
       "id": "session:sess-20261029-134338-7e5607",
       "type": "session",
       "label": "Micro Session sess-20261029-134338-7e5607",
-      "content": "Micro Session sess-20261029-134338-7e5607 [active] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 3, Writes: 6 | Entries: Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=1.00, PASS)",
+      "content": "Micro Session sess-20261029-134338-7e5607 [completed] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 4, Writes: 9 | Entries: Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=1.00, PASS)",
       "importance": 0.75,
       "tags": [
         "session",
         "micro-session",
-        "active"
+        "completed"
       ],
       "valid_from": "2026-10-29T13:43:38.952924+00:00",
-      "valid_to": null,
+      "valid_to": "2026-10-29T14:16:39.804715+00:00",
       "is_current": true,
       "created_at": "2026-10-29T13:43:38.952924+00:00",
-      "updated_at": "2026-10-29T13:58:49.685732+00:00",
+      "updated_at": "2026-10-29T14:16:41.335190+00:00",
       "metadata": {
         "session_id": "sess-20261029-134338-7e5607",
         "prior_session_id": "sess-20261016-123220-3ddf54",
         "parent_session_id": "sess-20261016-123220-3ddf54",
-        "read_count": 3,
-        "write_count": 6,
-        "status": "active",
-        "byte_size": 1893
+        "read_count": 4,
+        "write_count": 9,
+        "status": "completed",
+        "byte_size": 1956
       }
     }
   ],
@@ -518,8 +518,32 @@
       "weight": 1.0,
       "valid_from": "2026-10-29T13:57:24.993331+00:00",
       "is_current": true
+    },
+    {
+      "source": "episode:clean-repo-agentgraph",
+      "target": "session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T14:16:39.793721+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:clean-repo-agentgraph",
+      "target": "session:sess-20261029-134338-7e5607",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T14:16:41.313788+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:clean-repo-agentgraph",
+      "target": "session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-29T14:16:41.338189+00:00",
+      "is_current": true
     }
   ],
-  "revision": 88,
-  "content_hash": "sha256:d7b5068701fd081cbbac341707ceb136387fe188fdcb08ac71e47dafd05cca4d"
+  "revision": 97,
+  "content_hash": "sha256:29924ce67e204cb9a9139de132cc2a8bb999147025f6e1bf5756ac3fe4e15c22"
 }

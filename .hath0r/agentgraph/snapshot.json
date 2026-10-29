@@ -1,14 +1,14 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-AgentGraph",
-  "timestamp": "2026-10-29T13:58:49.787340+00:00",
+  "timestamp": "2026-10-29T14:16:41.434833+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
       "plane": "knowledge",
       "type": "knowledge_doc",
       "label": "AGENTS.md (root)",
-      "content": "# AGENTS.md — AgentGraph Cognitive Substrate & Architecture Directives\n\n> **Repository:** Bayly-AI/AgentGraph  \n> **Framework:** AgentGraph Multi-Plane Engine  \n> **Maintainer & Lead Reviewer:** Ray Bayly (@raybayly)  \n> **Status:** Active / Open Source  \n\n---\n\n## 1. System Invariants & Inviolable Directives\n\n### GRAPH-INV-001: Main & Development Branch Protection\nThis repository is open source and publicly accessible. However, direct pushes to `development`, `master`, `main`, `staging`, or `testing` are restricted exclusively to repository administrators. All proposed modifications must be submitted via Pull Requests against the `development` branch and must receive explicit review and approval by **Ray Bayly (`@raybayly`)** prior to merging.\n\n### GRAPH-INV-002: Acyclic Workflow Execution\nAll multi-agent pipelines and step dependencies must form a strictly Directed Acyclic Graph (DAG). Topological cycle verification (`agentgraph validate`) must pass cleanly on all PRs.\n\n### GRAPH-INV-",
+      "content": "# AGENTS.md — AgentGraph Cognitive Substrate & Architecture Directives\n\n> **Repository:** Bayly-AI/AgentGraph  \n> **Framework:** AgentGraph Multi-Plane Engine  \n> **Maintainer & Lead Reviewer:** Ray Bayly (@raybayly)  \n> **Status:** Active / Open Source  \n\n---\n\n## CR-CLI-ENTRY-001: Start with the CLI (CRITICAL — Org-Wide · CANONICAL)\n\n1. **Start with the CLI (CRITICAL ENTRY GATE)**: When receiving ANY request or starting any task, agents **MUST ALWAYS START WITH THE OPERATOR CLI (`hath0r`)** rather than inventing ad-hoc scripts. Check `hath0r --help` and the matching `hath0r <group> --help` first.\n2. **Missing Capability Offer**: If the required connection, MCP, workflow, bot, or factory does not exist in `hath0r`, offer to register the missing capability, using the original request as the acceptance test.\n3. **Docs before code**: Require procedure/playbook/runbook before scaffolding implementation.\n\nCanonical: `cr-cli-first-001` in the HATH0R-CLI governance docs (https://github.com/Ba",
       "properties": {
         "path": "AGENTS.md",
         "subsystem": "root"
@@ -150,6 +150,19 @@
       "content": "Governance policy rule CR-TASK-EVAL-001 referenced in AGENTS.md",
       "properties": {
         "rule_code": "CR-TASK-EVAL-001",
+        "priority": 4,
+        "restricted_actions": []
+      },
+      "is_current": true
+    },
+    {
+      "id": "rule:cr-cli-first-001",
+      "plane": "rules",
+      "type": "rule_policy",
+      "label": "Rule CR-CLI-FIRST-001",
+      "content": "Governance policy rule CR-CLI-FIRST-001 referenced in AGENTS.md",
+      "properties": {
+        "rule_code": "CR-CLI-FIRST-001",
         "priority": 4,
         "restricted_actions": []
       },
@@ -352,18 +365,18 @@
       "id": "memory:episode:clean-repo-agentgraph",
       "plane": "memory",
       "type": "episode",
-      "label": "Clean Repo Development Sync (AgentGraph)",
-      "content": "Verified all changes merged into development and synced for AgentGraph.",
+      "label": "Clean Repo Lifecycle (AgentGraph)",
+      "content": "Executed 13-step clean-repo hygiene, branch merges, and knowledge sync for AgentGraph.",
       "properties": {
         "source": "local_memory",
         "tags": [
           "clean-repo",
-          "development",
+          "hygiene",
           "agentgraph",
           "episode",
           "compounded"
         ],
-        "importance": 0.8
+        "importance": 0.75
       },
       "is_current": true
     },
@@ -437,7 +450,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-agentgraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
+          ".hath0r/evals/latest.json": "sha256:8171a84301c4270b5179207c829366c3d8fa92a20f298ac4064fdd31da643100"
         },
         "source": "local_memory",
         "tags": [
@@ -502,20 +515,20 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261029-134338-7e5607",
-      "content": "Micro Session sess-20261029-134338-7e5607 [active] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 3, Writes: 6 | Entries: Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=1.00, PASS)",
+      "content": "Micro Session sess-20261029-134338-7e5607 [completed] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 4, Writes: 9 | Entries: Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=1.00, PASS)",
       "properties": {
         "session_id": "sess-20261029-134338-7e5607",
         "prior_session_id": "sess-20261016-123220-3ddf54",
         "parent_session_id": "sess-20261016-123220-3ddf54",
-        "read_count": 3,
-        "write_count": 6,
-        "status": "active",
-        "byte_size": 1893,
+        "read_count": 4,
+        "write_count": 9,
+        "status": "completed",
+        "byte_size": 1956,
         "source": "local_memory",
         "tags": [
           "session",
           "micro-session",
-          "active"
+          "completed"
         ],
         "importance": 0.75
       },
@@ -750,6 +763,24 @@
       "is_current": true
     },
     {
+      "source": "memory:episode:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261029-134338-7e5607",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:cr-agentic-sec-001",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -793,6 +824,12 @@
     },
     {
       "source": "rule:cr-task-eval-001",
+      "target": "role:developer",
+      "relation": "GOVERNS",
+      "is_current": true
+    },
+    {
+      "source": "rule:cr-cli-first-001",
       "target": "role:developer",
       "relation": "GOVERNS",
       "is_current": true

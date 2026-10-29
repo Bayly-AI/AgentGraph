@@ -1,13 +1,13 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261029-135849-e8e5ca",
-  "task_id": "eval-baseline-agentgraph",
+  "eval_id": "eval-20261029-141640-1fd160",
+  "task_id": "clean-repo-agentgraph",
   "issue_number": null,
   "repo_name": "AgentGraph",
   "branch": "development",
-  "evaluated_at": "2026-10-29T13:58:49.456616+00:00",
-  "duration_ms": 202.09,
+  "evaluated_at": "2026-10-29T14:16:40.838166+00:00",
+  "duration_ms": 473.84,
   "passed_gate": true,
   "r_task": 1.0,
   "min_reward_threshold": 0.8,
@@ -64,13 +64,13 @@
       "estimated_usd": 0.0,
       "max_usd": 0.25,
       "session_id": "sess-20261029-134338-7e5607",
-      "session_reads": 3,
-      "session_writes": 5,
-      "session_bytes": 1897,
+      "session_reads": 4,
+      "session_writes": 8,
+      "session_bytes": 1760,
       "within_capsule_budget": true,
-      "latency_ms": 74.12,
-      "taguchi_quality_loss": 0.0001,
-      "snr_db": 28.62
+      "latency_ms": 206.06,
+      "taguchi_quality_loss": 0.0005,
+      "snr_db": 19.74
     },
     "adversarial": {
       "score": 1.0,
@@ -85,7 +85,7 @@
     "goal_alignment": {
       "score": 1.0,
       "passed": true,
-      "task_id": "eval-baseline-agentgraph",
+      "task_id": "clean-repo-agentgraph",
       "issue_number": null,
       "active_focus": "Provisioning CR-TASK-EVAL-001 for AgentGraph",
       "compounded_nodes_count": 7,
@@ -99,16 +99,13 @@
         ".hath0r/evals/latest.json"
       ],
       "STATIC_AST_ANALYSIS": [
-        ".hath0r/evals/post-task-hook.sh",
         ".hath0r/agentgraph/snapshot.json",
-        ".hath0r/evals/history/eval-eval-baseline-agentgraph.json",
-        ".hath0r/evals/latest.json",
         ".hath0r/memory/graph.json",
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
         ".hath0r/memory/sessions/sess-20261029-134338-7e5607.json",
-        "cfg/evals/task-eval.json"
+        "CLAUDE.md"
       ],
       "UNVERIFIED_FILE_PRESENCE": [
         ".agentgraph/graph.db"
@@ -116,7 +113,7 @@
     },
     "counts": {
       "VERIFIED_EXECUTION": 1,
-      "STATIC_AST_ANALYSIS": 10,
+      "STATIC_AST_ANALYSIS": 7,
       "UNVERIFIED_FILE_PRESENCE": 1
     }
   },
@@ -124,5 +121,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:8055df9c0371a5d2136497eb3ca7a48f3965e42ed62d75ff8bd72b83d52607d0"
+  "content_hash": "sha256:ea9d6c2412efad4bbdef6d779a888d14e44fbba208aa642f55c7b22a3b1e1d75"
 }
