@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-AgentGraph",
-  "timestamp": "2026-10-29T13:43:41.426917+00:00",
+  "timestamp": "2026-10-29T13:58:49.787340+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -415,7 +415,7 @@
       "content": "4-Tier Task Evaluation for eval-baseline-agentgraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:22cea7ec3fa3227648ad089d31c9ca68a19ff9a06707f2fb8f05239f9bd88490"
+          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
         },
         "source": "local_memory",
         "tags": [
@@ -437,7 +437,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-agentgraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:22cea7ec3fa3227648ad089d31c9ca68a19ff9a06707f2fb8f05239f9bd88490"
+          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
         },
         "source": "local_memory",
         "tags": [
@@ -483,7 +483,7 @@
       "content": "4-Tier Task Evaluation for task-AgentGraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:f56b49fa7248daa24c8da80de54a5e9b0a8fc16fb6a74dcf6339d201e53221fa"
+          ".hath0r/evals/latest.json": "sha256:9bcfde4489b419a9fed3c1848d8ab97c93b52beb0535f72b9922a45b2543b89b"
         },
         "source": "local_memory",
         "tags": [
@@ -502,15 +502,15 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261029-134338-7e5607",
-      "content": "Micro Session sess-20261029-134338-7e5607 [active] | Focus: Active working session in AgentGraph | Reads: 1, Writes: 2 | Entries: Harmonized rules, synced CLAUDE.md 1:1 with AGENTS.md (CR-CLAUDE-SYNC-001), initialized THREATMODEL.md, and upgraded workflows.; Compounded eval:task-AgentGraph: Task Evaluation task-AgentGraph (R=1.00, PASS)",
+      "content": "Micro Session sess-20261029-134338-7e5607 [active] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 3, Writes: 6 | Entries: Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=1.00, PASS)",
       "properties": {
         "session_id": "sess-20261029-134338-7e5607",
         "prior_session_id": "sess-20261016-123220-3ddf54",
         "parent_session_id": "sess-20261016-123220-3ddf54",
-        "read_count": 1,
-        "write_count": 2,
+        "read_count": 3,
+        "write_count": 6,
         "status": "active",
-        "byte_size": 2036,
+        "byte_size": 1893,
         "source": "local_memory",
         "tags": [
           "session",
@@ -727,6 +727,24 @@
     },
     {
       "source": "memory:eval:task-AgentGraph",
+      "target": "memory:session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:rule:cr-task-eval-001",
+      "target": "memory:session:sess-20261029-134338-7e5607",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:eval-baseline-agentgraph",
+      "target": "memory:session:sess-20261029-134338-7e5607",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:eval-baseline-agentgraph",
       "target": "memory:session:sess-20261029-134338-7e5607",
       "relation": "DERIVES_FROM",
       "is_current": true

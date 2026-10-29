@@ -3,55 +3,50 @@
   "session_id": "sess-20261029-134338-7e5607",
   "prior_session_id": "sess-20261016-123220-3ddf54",
   "parent_session_id": "sess-20261016-123220-3ddf54",
-  "revision": 3,
-  "content_hash": "sha256:478b60e86aea9e23982909b467c86efb15649aeedfb28f0784e5165816dc183f",
-  "base_graph_hash": "sha256:2e9a90802a5a76868f71d22016710913c3bedd35c98c8da0dc49a96aad9248e9",
+  "revision": 9,
+  "content_hash": "sha256:588d02c1796abcd3a922a98b32c0f61ac37ff306492d367bee13eaaf39cebaf4",
+  "base_graph_hash": "sha256:9b13e015c5fb2edb95bd7320dfdbf8e188156651806f59adba4a0e48b757cbcc",
   "task_id": "rule-sync-and-workflow-upgrade",
   "role": null,
   "repo_name": "AgentGraph",
   "status": "active",
   "started_at": "2026-10-29T13:43:38.952924+00:00",
-  "updated_at": "2026-10-29T13:43:41.377910+00:00",
+  "updated_at": "2026-10-29T13:58:49.685732+00:00",
   "ended_at": null,
-  "read_count": 1,
-  "write_count": 2,
-  "last_read_at": "2026-10-29T13:43:38.952924+00:00",
-  "last_write_at": "2026-10-29T13:43:41.377910+00:00",
-  "active_focus": "Active working session in AgentGraph",
-  "prior_summary": "Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=1.00, PASS)",
+  "read_count": 3,
+  "write_count": 6,
+  "last_read_at": "2026-10-29T13:58:49.324237+00:00",
+  "last_write_at": "2026-10-29T13:58:49.685732+00:00",
+  "active_focus": "Provisioning CR-TASK-EVAL-001 for AgentGraph",
+  "prior_summary": "ounded rule:cr-task-eval-001: Automa; Compounded eval:eval-baseline-agentgraph; Compounded rule:cr-task-eval-001: Automa",
   "recalled_nodes": [
     {
-      "id": "rule:cr-task-eval-001",
-      "type": "rule",
-      "label": "Automatic Task Evaluation & Scorecard Summary Gate (CR-TASK-",
-      "snippet": "Every task must execute and pass the 4-tier hybrid evaluation pipeline (R_task >= 0.80), p"
+      "id": "eval:eval-baseline-agentgraph",
+      "type": "eval",
+      "label": "Task Evaluation eval-baseline-agentgraph (R=1.00, PASS)",
+      "snippet": "4-Tier Task Evaluation for eval-baseline-agentgraph on branch development: R_task=1.0000 ("
     }
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-29T13:43:39.597030+00:00",
-      "kind": "observation",
-      "summary": "Harmonized rules, synced CLAUDE.md 1:1 with AGENTS.md (CR-CLAUDE-SYNC-001), initialized THREATMODEL.md, and upgraded workflows.",
-      "tags": [],
-      "node_id": null
-    },
-    {
-      "timestamp": "2026-10-29T13:43:41.377910+00:00",
+      "timestamp": "2026-10-29T13:58:49.685732+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:task-AgentGraph: Task Evaluation task-AgentGraph (R=1.00, PASS)",
+      "summary": "Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=1.00, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
-        "task-agentgraph",
+        "eval-baseline-agentgraph",
         "passed",
         "compounded"
       ],
-      "node_id": "eval:task-AgentGraph"
+      "node_id": "eval:eval-baseline-agentgraph"
     }
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:task-AgentGraph"
+    "eval:task-AgentGraph",
+    "rule:cr-task-eval-001",
+    "eval:eval-baseline-agentgraph"
   ],
-  "capsule_bytes": 2036
+  "capsule_bytes": 1893
 }
