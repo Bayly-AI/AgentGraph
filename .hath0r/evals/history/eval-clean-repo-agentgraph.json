@@ -1,15 +1,15 @@
 {
   "schema_version": "hath0r.evals.scorecard/v1",
   "rule_id": "CR-TASK-EVAL-001",
-  "eval_id": "eval-20261031-162306-7b0013",
+  "eval_id": "eval-20261031-162758-0ff5b7",
   "task_id": "clean-repo-agentgraph",
   "issue_number": null,
   "repo_name": "AgentGraph",
   "branch": "development",
-  "evaluated_at": "2026-10-31T16:23:06.108365+00:00",
-  "duration_ms": 492.17,
+  "evaluated_at": "2026-10-31T16:27:58.924984+00:00",
+  "duration_ms": 583.39,
   "passed_gate": true,
-  "r_task": 0.9354,
+  "r_task": 0.9435,
   "min_reward_threshold": 0.8,
   "weights": {
     "deterministic": 0.4,
@@ -18,14 +18,14 @@
     "goal_alignment": 0.15
   },
   "tier_scores": {
-    "deterministic": 0.9398,
-    "trajectory": 0.931,
+    "deterministic": 0.9601,
+    "trajectory": 0.9307,
     "adversarial": 0.936,
     "goal_alignment": 0.9287
   },
   "tiers": {
     "deterministic": {
-      "score": 0.9398,
+      "score": 0.9601,
       "passed": true,
       "passed_checks": 6,
       "total_checks": 6,
@@ -34,7 +34,7 @@
         "agentgraph_valid": 1.0,
         "memory_compounded": 0.975,
         "test_suite": 0.88,
-        "calibration_4h": 0.82,
+        "calibration_4h": 0.9895,
         "local_quality_gates": 0.9598
       },
       "checks": {
@@ -66,8 +66,8 @@
         },
         "calibration_4h": {
           "passed": true,
-          "is_fresh": false,
-          "age_hours": 50.6,
+          "is_fresh": true,
+          "age_hours": 0.02,
           "max_age_hours": 4.0
         },
         "local_quality_gates": {
@@ -248,22 +248,22 @@
       }
     },
     "trajectory": {
-      "score": 0.931,
+      "score": 0.9307,
       "passed": true,
-      "tokens_used": 144,
+      "tokens_used": 142,
       "max_tokens": 50000,
-      "estimated_usd": 0.000432,
+      "estimated_usd": 0.000426,
       "max_usd": 0.25,
-      "session_id": "sess-20261031-162305-d1512a",
+      "session_id": "sess-20261031-162758-1509eb",
       "session_reads": 2,
       "session_writes": 3,
       "session_bytes": 1981,
       "capsule_fill_ratio": 0.9673,
       "within_capsule_budget": true,
-      "latency_ms": 267.9,
-      "taguchi_quality_loss": 0.0011,
-      "taguchi_score": 0.9772,
-      "snr_db": 17.46
+      "latency_ms": 327.24,
+      "taguchi_quality_loss": 0.0016,
+      "taguchi_score": 0.976,
+      "snr_db": 15.72
     },
     "adversarial": {
       "score": 0.936,
@@ -405,7 +405,7 @@
         ".hath0r/memory/hashes.json",
         ".hath0r/memory/sessions/current.json",
         ".hath0r/memory/sessions/latest.json",
-        ".hath0r/memory/sessions/sess-20261031-162305-d1512a.json"
+        ".hath0r/memory/sessions/sess-20261031-162758-1509eb.json"
       ],
       "UNVERIFIED_FILE_PRESENCE": [
         ".agentgraph/graph.db"
@@ -421,5 +421,5 @@
   "observability_sync": {
     "mode": "pending"
   },
-  "content_hash": "sha256:6ba72e153b3b848e8ed5bdd768ea1598ec41e6feab431798eda3e6fa38abf4b4"
+  "content_hash": "sha256:572ae5aeeb211859d1d770bef625e83e3345b937b075a3fdab1d6f1a825dff38"
 }

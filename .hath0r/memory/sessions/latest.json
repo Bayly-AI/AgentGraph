@@ -1,22 +1,22 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261031-162305-d1512a",
-  "prior_session_id": "sess-20261031-161623-6976a6",
-  "parent_session_id": "sess-20261031-161623-6976a6",
+  "session_id": "sess-20261031-162758-1509eb",
+  "prior_session_id": "sess-20261031-162305-d1512a",
+  "parent_session_id": "sess-20261031-162305-d1512a",
   "revision": 5,
-  "content_hash": "sha256:2bf8ed969e4faf2695bd8f42113c422e01d8d90afa6f4aadc6f0e65e569e62cc",
-  "base_graph_hash": "sha256:a0e584fee3cae8f0b3de0419e1ef5e633526bead99eff85f7804a84460396138",
+  "content_hash": "sha256:372fa411b3948eb2c95d53cae3eeaed0230e5510a081b59876d98e9dcc6418df",
+  "base_graph_hash": "sha256:27ce1af3f14b1e336a9dcdb985352a2cb83b5e254303fe4d961c3f540a8c6034",
   "task_id": null,
   "role": null,
   "repo_name": "AgentGraph",
   "status": "completed",
-  "started_at": "2026-10-31T16:23:05.582721+00:00",
-  "updated_at": "2026-10-31T16:23:06.631256+00:00",
-  "ended_at": "2026-10-31T16:23:05.636587+00:00",
+  "started_at": "2026-10-31T16:27:58.394237+00:00",
+  "updated_at": "2026-10-31T16:27:59.539655+00:00",
+  "ended_at": "2026-10-31T16:27:58.450424+00:00",
   "read_count": 2,
   "write_count": 4,
-  "last_read_at": "2026-10-31T16:23:05.597635+00:00",
-  "last_write_at": "2026-10-31T16:23:06.631256+00:00",
+  "last_read_at": "2026-10-31T16:27:58.408191+00:00",
+  "last_write_at": "2026-10-31T16:27:59.539655+00:00",
   "active_focus": "clean-repo-AgentGraph",
   "prior_summary": "clean-repo-agentgraph (R=0.94, PASS); Started session focus: clean-repo-AgentG; Compounded episode:clean-repo-agentgraph",
   "recalled_nodes": [
@@ -29,7 +29,7 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-31T16:23:05.636587+00:00",
+      "timestamp": "2026-10-31T16:27:58.450424+00:00",
       "kind": "milestone",
       "summary": "Clean Repo Lifecycle completed for AgentGraph.",
       "tags": [
@@ -38,7 +38,7 @@
       "node_id": null
     },
     {
-      "timestamp": "2026-10-31T16:23:06.631256+00:00",
+      "timestamp": "2026-10-31T16:27:59.539655+00:00",
       "kind": "compound",
       "summary": "Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
       "tags": [
