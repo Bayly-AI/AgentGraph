@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-AgentGraph",
-  "timestamp": "2026-10-31T16:16:24.806221+00:00",
+  "timestamp": "2026-10-31T16:23:06.687915+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -428,7 +428,7 @@
       "content": "4-Tier Task Evaluation for eval-baseline-agentgraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:8171a84301c4270b5179207c829366c3d8fa92a20f298ac4064fdd31da643100"
+          ".hath0r/evals/latest.json": "sha256:98bbfb4a062b58d5dd6b83d95ae900c74d91592d8937a89869dd5bc09fc35d67"
         },
         "source": "local_memory",
         "tags": [
@@ -450,7 +450,7 @@
       "content": "4-Tier Task Evaluation for clean-repo-agentgraph on branch development: R_task=0.9354 (det=0.94, traj=0.93, adv=0.94, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:98bbfb4a062b58d5dd6b83d95ae900c74d91592d8937a89869dd5bc09fc35d67"
+          ".hath0r/evals/latest.json": "sha256:f91050c6fe8a1bf573301fa3409b11bdfb53633ec5852c8b8a8a91397bbde00f"
         },
         "source": "local_memory",
         "tags": [
@@ -496,7 +496,7 @@
       "content": "4-Tier Task Evaluation for task-AgentGraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:8171a84301c4270b5179207c829366c3d8fa92a20f298ac4064fdd31da643100"
+          ".hath0r/evals/latest.json": "sha256:98bbfb4a062b58d5dd6b83d95ae900c74d91592d8937a89869dd5bc09fc35d67"
         },
         "source": "local_memory",
         "tags": [
@@ -544,6 +544,30 @@
         "session_id": "sess-20261031-161623-6976a6",
         "prior_session_id": "sess-20261029-134338-7e5607",
         "parent_session_id": "sess-20261029-134338-7e5607",
+        "read_count": 2,
+        "write_count": 4,
+        "status": "completed",
+        "byte_size": 2041,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "completed"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261031-162305-d1512a",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261031-162305-d1512a",
+      "content": "Micro Session sess-20261031-162305-d1512a [completed] | Focus: clean-repo-AgentGraph | Reads: 2, Writes: 4 | Entries: Clean Repo Lifecycle completed for AgentGraph.; Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
+      "properties": {
+        "session_id": "sess-20261031-162305-d1512a",
+        "prior_session_id": "sess-20261031-161623-6976a6",
+        "parent_session_id": "sess-20261031-161623-6976a6",
         "read_count": 2,
         "write_count": 4,
         "status": "completed",
@@ -3063,6 +3087,36 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261031-161623-6976a6",
+      "target": "memory:session:sess-20261031-162305-d1512a",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261031-162305-d1512a",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261031-162305-d1512a",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261031-162305-d1512a",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261031-162305-d1512a",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:cr-agentic-sec-001",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -3196,6 +3250,12 @@
     },
     {
       "source": "memory:session:sess-20261031-161623-6976a6",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261031-162305-d1512a",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true

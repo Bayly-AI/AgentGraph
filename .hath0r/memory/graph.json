@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "graph_id": "canonical-memory-space",
-  "updated_at": "2026-10-31T16:16:24.811768+00:00",
+  "updated_at": "2026-10-31T16:23:06.693769+00:00",
   "nodes": [
     {
       "id": "rule:cr-cli-entry-001",
@@ -98,11 +98,11 @@
         "episode",
         "compounded"
       ],
-      "valid_from": "2026-10-31T16:16:23.525588+00:00",
+      "valid_from": "2026-10-31T16:23:05.608912+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-16T15:48:03.997000+00:00",
-      "updated_at": "2026-10-31T16:16:23.525588+00:00",
+      "updated_at": "2026-10-31T16:23:05.608912+00:00",
       "metadata": {}
     },
     {
@@ -167,7 +167,7 @@
       "updated_at": "2026-10-29T13:58:49.670574+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:98bbfb4a062b58d5dd6b83d95ae900c74d91592d8937a89869dd5bc09fc35d67"
+          ".hath0r/evals/latest.json": "sha256:f91050c6fe8a1bf573301fa3409b11bdfb53633ec5852c8b8a8a91397bbde00f"
         }
       }
     },
@@ -184,14 +184,14 @@
         "passed",
         "compounded"
       ],
-      "valid_from": "2026-10-31T16:16:24.735194+00:00",
+      "valid_from": "2026-10-31T16:23:06.615070+00:00",
       "valid_to": null,
       "is_current": true,
       "created_at": "2026-10-28T15:20:05.117109+00:00",
-      "updated_at": "2026-10-31T16:16:24.735194+00:00",
+      "updated_at": "2026-10-31T16:23:06.615070+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:98bbfb4a062b58d5dd6b83d95ae900c74d91592d8937a89869dd5bc09fc35d67"
+          ".hath0r/evals/latest.json": "sha256:f91050c6fe8a1bf573301fa3409b11bdfb53633ec5852c8b8a8a91397bbde00f"
         }
       }
     },
@@ -241,7 +241,7 @@
       "updated_at": "2026-10-29T13:43:41.366944+00:00",
       "metadata": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:98bbfb4a062b58d5dd6b83d95ae900c74d91592d8937a89869dd5bc09fc35d67"
+          ".hath0r/evals/latest.json": "sha256:f91050c6fe8a1bf573301fa3409b11bdfb53633ec5852c8b8a8a91397bbde00f"
         }
       }
     },
@@ -291,6 +291,32 @@
         "session_id": "sess-20261031-161623-6976a6",
         "prior_session_id": "sess-20261029-134338-7e5607",
         "parent_session_id": "sess-20261029-134338-7e5607",
+        "read_count": 2,
+        "write_count": 4,
+        "status": "completed",
+        "byte_size": 2041
+      }
+    },
+    {
+      "id": "session:sess-20261031-162305-d1512a",
+      "type": "session",
+      "label": "Micro Session sess-20261031-162305-d1512a",
+      "content": "Micro Session sess-20261031-162305-d1512a [completed] | Focus: clean-repo-AgentGraph | Reads: 2, Writes: 4 | Entries: Clean Repo Lifecycle completed for AgentGraph.; Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
+      "importance": 0.75,
+      "tags": [
+        "session",
+        "micro-session",
+        "completed"
+      ],
+      "valid_from": "2026-10-31T16:23:05.582721+00:00",
+      "valid_to": "2026-10-31T16:23:05.636587+00:00",
+      "is_current": true,
+      "created_at": "2026-10-31T16:23:05.582721+00:00",
+      "updated_at": "2026-10-31T16:23:06.631256+00:00",
+      "metadata": {
+        "session_id": "sess-20261031-162305-d1512a",
+        "prior_session_id": "sess-20261031-161623-6976a6",
+        "parent_session_id": "sess-20261031-161623-6976a6",
         "read_count": 2,
         "write_count": 4,
         "status": "completed",
@@ -608,8 +634,48 @@
       "weight": 1.0,
       "valid_from": "2026-10-31T16:16:24.753805+00:00",
       "is_current": true
+    },
+    {
+      "source": "session:sess-20261031-161623-6976a6",
+      "target": "session:sess-20261031-162305-d1512a",
+      "relation": "PRECEDES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T16:23:05.589183+00:00",
+      "is_current": true
+    },
+    {
+      "source": "session:sess-20261031-162305-d1512a",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "weight": 0.8,
+      "valid_from": "2026-10-31T16:23:05.589183+00:00",
+      "is_current": true
+    },
+    {
+      "source": "episode:clean-repo-agentgraph",
+      "target": "session:sess-20261031-162305-d1512a",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T16:23:05.625662+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:clean-repo-agentgraph",
+      "target": "session:sess-20261031-162305-d1512a",
+      "relation": "EVALUATES",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T16:23:06.615070+00:00",
+      "is_current": true
+    },
+    {
+      "source": "eval:clean-repo-agentgraph",
+      "target": "session:sess-20261031-162305-d1512a",
+      "relation": "DERIVES_FROM",
+      "weight": 1.0,
+      "valid_from": "2026-10-31T16:23:06.633503+00:00",
+      "is_current": true
     }
   ],
-  "revision": 107,
-  "content_hash": "sha256:33e08909b94a4f32f6111d017edaefe8d2eb8ca332eea2ebfbe5040b2f7f199e"
+  "revision": 117,
+  "content_hash": "sha256:22a3c9f075f0d2bb0638b3f46900c741fd45d6d681cadc0985ae72ad092c966e"
 }
