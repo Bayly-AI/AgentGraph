@@ -1,24 +1,24 @@
 {
   "schema_version": "hath0r.micro_session/1",
-  "session_id": "sess-20261029-134338-7e5607",
-  "prior_session_id": "sess-20261016-123220-3ddf54",
-  "parent_session_id": "sess-20261016-123220-3ddf54",
-  "revision": 13,
-  "content_hash": "sha256:e2217142bcc59018b40f7fad80beb6a16632c1a0430109ca51c7a8b9473d05be",
-  "base_graph_hash": "sha256:d7b5068701fd081cbbac341707ceb136387fe188fdcb08ac71e47dafd05cca4d",
-  "task_id": "rule-sync-and-workflow-upgrade",
+  "session_id": "sess-20261031-161623-6976a6",
+  "prior_session_id": "sess-20261029-134338-7e5607",
+  "parent_session_id": "sess-20261029-134338-7e5607",
+  "revision": 5,
+  "content_hash": "sha256:f7379eafa1efabc869b994bcf17d1d3d999509dcd6e91f694c336dedf9f541b5",
+  "base_graph_hash": "sha256:ad1471cbabbb6f4a44435dcddcddbfe92b1560a553de6665d1e465ff2b7c50d8",
+  "task_id": null,
   "role": null,
   "repo_name": "AgentGraph",
   "status": "completed",
-  "started_at": "2026-10-29T13:43:38.952924+00:00",
-  "updated_at": "2026-10-29T14:16:41.335190+00:00",
-  "ended_at": "2026-10-29T14:16:39.804715+00:00",
-  "read_count": 4,
-  "write_count": 9,
-  "last_read_at": "2026-10-29T14:16:39.763644+00:00",
-  "last_write_at": "2026-10-29T14:16:41.335190+00:00",
-  "active_focus": "Provisioning CR-TASK-EVAL-001 for AgentGraph",
-  "prior_summary": "ounded eval:eval-baseline-agentgraph; Compounded episode:clean-repo-agentgraph; Clean Repo Lifecycle completed for Agent",
+  "started_at": "2026-10-31T16:16:23.492340+00:00",
+  "updated_at": "2026-10-31T16:16:24.751593+00:00",
+  "ended_at": "2026-10-31T16:16:23.551822+00:00",
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-10-31T16:16:23.514765+00:00",
+  "last_write_at": "2026-10-31T16:16:24.751593+00:00",
+  "active_focus": "clean-repo-AgentGraph",
+  "prior_summary": "clean-repo-agentgraph (R=1.00, PASS); Started session focus: clean-repo-AgentG; Compounded episode:clean-repo-agentgraph",
   "recalled_nodes": [
     {
       "id": "insight:agentgraph",
@@ -29,9 +29,18 @@
   ],
   "micro_entries": [
     {
-      "timestamp": "2026-10-29T14:16:41.335190+00:00",
+      "timestamp": "2026-10-31T16:16:23.551822+00:00",
+      "kind": "milestone",
+      "summary": "Clean Repo Lifecycle completed for AgentGraph.",
+      "tags": [
+        "session-end"
+      ],
+      "node_id": null
+    },
+    {
+      "timestamp": "2026-10-31T16:16:24.751593+00:00",
       "kind": "compound",
-      "summary": "Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=1.00, PASS)",
+      "summary": "Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
       "tags": [
         "eval",
         "cr-task-eval-001",
@@ -44,11 +53,8 @@
   ],
   "next_steps": [],
   "compounded_node_ids": [
-    "eval:task-AgentGraph",
-    "rule:cr-task-eval-001",
-    "eval:eval-baseline-agentgraph",
     "episode:clean-repo-agentgraph",
     "eval:clean-repo-agentgraph"
   ],
-  "capsule_bytes": 1956
+  "capsule_bytes": 2041
 }
