@@ -1,0 +1,60 @@
+{
+  "schema_version": "hath0r.micro_session/1",
+  "session_id": "sess-20261107-182424-577368",
+  "prior_session_id": "sess-20261031-162758-1509eb",
+  "parent_session_id": "sess-20261031-162758-1509eb",
+  "revision": 5,
+  "content_hash": "sha256:f5fc3fbd4b2042a2abf913d006c6a5bc7c851d245ad5bcc4ad123dc6326206a6",
+  "base_graph_hash": "sha256:483c786d060371a8e962ba526de728d0c72b842c43d3c4ac87f595219d6065da",
+  "task_id": null,
+  "role": null,
+  "repo_name": "AgentGraph",
+  "status": "completed",
+  "started_at": "2026-11-07T18:24:24.093899+00:00",
+  "updated_at": "2026-11-07T18:24:25.305364+00:00",
+  "ended_at": "2026-11-07T18:24:24.160008+00:00",
+  "read_count": 2,
+  "write_count": 4,
+  "last_read_at": "2026-11-07T18:24:24.116537+00:00",
+  "last_write_at": "2026-11-07T18:24:25.305364+00:00",
+  "active_focus": "clean-repo-AgentGraph",
+  "prior_summary": "l-baseline-agentgraph (R=0.93, PASS); Started session focus: clean-repo-AgentG; Compounded episode:clean-repo-agentgraph",
+  "recalled_nodes": [
+    {
+      "id": "insight:agentgraph",
+      "type": "insight",
+      "label": "Synthesized Insight on agentgraph",
+      "snippet": "Consolidated from 2 memory nodes tagged 'agentgraph'. Recurring themes: agentgraph, https,"
+    }
+  ],
+  "micro_entries": [
+    {
+      "timestamp": "2026-11-07T18:24:24.160008+00:00",
+      "kind": "milestone",
+      "summary": "Clean Repo Lifecycle completed for AgentGraph.",
+      "tags": [
+        "session-end"
+      ],
+      "node_id": null
+    },
+    {
+      "timestamp": "2026-11-07T18:24:25.305364+00:00",
+      "kind": "compound",
+      "summary": "Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
+      "tags": [
+        "eval",
+        "cr-task-eval-001",
+        "clean-repo-agentgraph",
+        "passed",
+        "compounded"
+      ],
+      "node_id": "eval:clean-repo-agentgraph"
+    }
+  ],
+  "next_steps": [],
+  "compounded_node_ids": [
+    "episode:clean-repo-agentgraph",
+    "eval:clean-repo-agentgraph"
+  ],
+  "capsule_bytes": 2041
+}

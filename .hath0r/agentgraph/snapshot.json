@@ -1,7 +1,7 @@
 {
   "schema_version": "hath0r.agentgraph/1",
   "graph_id": "agentgraph-AgentGraph",
-  "timestamp": "2026-11-02T16:42:16.145895+00:00",
+  "timestamp": "2026-11-07T18:24:25.366957+00:00",
   "nodes": [
     {
       "id": "doc:agents-root",
@@ -447,10 +447,10 @@
       "plane": "memory",
       "type": "eval",
       "label": "Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
-      "content": "4-Tier Task Evaluation for clean-repo-agentgraph on branch development: R_task=0.9435 (det=0.96, traj=0.93, adv=0.94, goal=0.93). Gate=PASSED.",
+      "content": "4-Tier Task Evaluation for clean-repo-agentgraph on branch development: R_task=0.9354 (det=0.94, traj=0.93, adv=0.94, goal=0.93). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6c5bfb93211540d437118275a5fa80088a610dca1d72c6ec4216bd2544bacfa1"
+          ".hath0r/evals/latest.json": "sha256:63bdc94fdb0161839f3baab89d95c62e3021e859439ea3cdced551548fdfa76b"
         },
         "source": "local_memory",
         "tags": [
@@ -496,7 +496,7 @@
       "content": "4-Tier Task Evaluation for task-AgentGraph on branch development: R_task=1.0000 (det=1.00, traj=1.00, adv=1.00, goal=1.00). Gate=PASSED.",
       "properties": {
         "source_files": {
-          ".hath0r/evals/latest.json": "sha256:6c5bfb93211540d437118275a5fa80088a610dca1d72c6ec4216bd2544bacfa1"
+          ".hath0r/evals/latest.json": "sha256:117a5f2ea95fc3fccd3ada38403ba9171edb33a4db25fed58a99b027bc14d75a"
         },
         "source": "local_memory",
         "tags": [
@@ -587,15 +587,39 @@
       "plane": "memory",
       "type": "session",
       "label": "Micro Session sess-20261031-162758-1509eb",
-      "content": "Micro Session sess-20261031-162758-1509eb [completed] | Focus: Provisioning CR-TASK-EVAL-001 for AgentGraph | Reads: 3, Writes: 7 | Entries: Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=0.93, PASS)",
+      "content": "Micro Session sess-20261031-162758-1509eb [completed] | Focus: Repository orientation verified for AgentGraph | Reads: 4, Writes: 7 | Entries: Compounded eval:eval-baseline-agentgraph: Task Evaluation eval-baseline-agentgraph (R=0.93, PASS)",
       "properties": {
         "session_id": "sess-20261031-162758-1509eb",
         "prior_session_id": "sess-20261031-162305-d1512a",
         "parent_session_id": "sess-20261031-162305-d1512a",
-        "read_count": 3,
+        "read_count": 4,
         "write_count": 7,
         "status": "completed",
-        "byte_size": 1975,
+        "byte_size": 1972,
+        "source": "local_memory",
+        "tags": [
+          "session",
+          "micro-session",
+          "completed"
+        ],
+        "importance": 0.75
+      },
+      "is_current": true
+    },
+    {
+      "id": "memory:session:sess-20261107-182424-577368",
+      "plane": "memory",
+      "type": "session",
+      "label": "Micro Session sess-20261107-182424-577368",
+      "content": "Micro Session sess-20261107-182424-577368 [completed] | Focus: clean-repo-AgentGraph | Reads: 2, Writes: 4 | Entries: Clean Repo Lifecycle completed for AgentGraph.; Compounded eval:clean-repo-agentgraph: Task Evaluation clean-repo-agentgraph (R=0.94, PASS)",
+      "properties": {
+        "session_id": "sess-20261107-182424-577368",
+        "prior_session_id": "sess-20261031-162758-1509eb",
+        "parent_session_id": "sess-20261031-162758-1509eb",
+        "read_count": 2,
+        "write_count": 4,
+        "status": "completed",
+        "byte_size": 2041,
         "source": "local_memory",
         "tags": [
           "session",
@@ -3240,6 +3264,36 @@
       "is_current": true
     },
     {
+      "source": "memory:session:sess-20261031-162758-1509eb",
+      "target": "memory:session:sess-20261107-182424-577368",
+      "relation": "PRECEDES",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261107-182424-577368",
+      "target": "concept:tri-graph",
+      "relation": "RELATES_TO",
+      "is_current": true
+    },
+    {
+      "source": "memory:episode:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261107-182424-577368",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261107-182424-577368",
+      "relation": "EVALUATES",
+      "is_current": true
+    },
+    {
+      "source": "memory:eval:clean-repo-agentgraph",
+      "target": "memory:session:sess-20261107-182424-577368",
+      "relation": "DERIVES_FROM",
+      "is_current": true
+    },
+    {
       "source": "rule:cr-agentic-sec-001",
       "target": "role:developer",
       "relation": "GOVERNS",
@@ -3385,6 +3439,12 @@
     },
     {
       "source": "memory:session:sess-20261031-162758-1509eb",
+      "target": "role:developer",
+      "relation": "INFORMS",
+      "is_current": true
+    },
+    {
+      "source": "memory:session:sess-20261107-182424-577368",
       "target": "role:developer",
       "relation": "INFORMS",
       "is_current": true
